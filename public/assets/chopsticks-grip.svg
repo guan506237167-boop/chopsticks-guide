@@ -1,0 +1,20 @@
+<svg width="1200" height="760" viewBox="0 0 1200 760" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="760" rx="28" fill="#FCF7EF"/>
+  <rect x="42" y="42" width="1116" height="676" rx="24" fill="#FFFDF8" stroke="#E3D6C7" stroke-width="2"/>
+  <path d="M343 514C327.445 446.262 358.402 375.227 418.287 340.614L488.298 300.116C550.25 264.284 629.189 287.537 662.575 350.845L712.309 445.137C740.901 499.335 724.364 565.251 674.724 600.084L608.776 646.372C539.675 694.885 444.792 663.89 417.559 584.196L343 514Z" fill="#F3CDAE"/>
+  <path d="M405 503C413.619 531.092 444.594 546.439 472.878 538.513L568.83 511.623C597.553 503.575 615.115 474.466 608.174 445.457L604.116 428.499C598.962 406.949 580.415 391.298 558.335 389.834L461.723 383.429C432.988 381.524 407.222 399.879 400.174 427.878L393.893 452.825C389.76 469.237 390.289 486.991 395.423 503.12L405 503Z" fill="#F8DABD"/>
+  <path d="M440 409L780 209C792.551 201.617 808.612 205.837 815.938 218.422V218.422C822.961 230.484 819.255 245.93 807.489 253.456L474 466" stroke="#A63D2D" stroke-width="18" stroke-linecap="round"/>
+  <path d="M466 451L812 283C824.822 276.778 840.335 282.011 846.761 294.731V294.731C853.022 307.124 848.365 322.278 836.213 328.995L491 525" stroke="#C76C35" stroke-width="18" stroke-linecap="round"/>
+  <circle cx="464" cy="455" r="16" fill="#A63D2D"/>
+  <circle cx="491" cy="525" r="16" fill="#C76C35"/>
+  <path d="M501 368C531.376 361.679 552.254 334.243 549.287 303.357L547.145 281.057C544.029 248.034 514.685 224.278 481.807 228.091V228.091C448.213 231.988 423.917 261.902 426.546 295.622L428.137 316.026C430.651 348.276 458.578 372.829 490.922 371.176L501 368Z" fill="#F7D4B1"/>
+  <path d="M468 237C499.469 246.204 521.951 275.331 523.844 308.065L526.009 345.496" stroke="#E7B789" stroke-width="10" stroke-linecap="round"/>
+  <rect x="82" y="88" width="282" height="118" rx="18" fill="#FFF4E5"/>
+  <text x="114" y="142" fill="#231D18" font-family="Georgia, serif" font-size="34" font-weight="700">Bottom stick stays still</text>
+  <text x="114" y="182" fill="#62594E" font-family="Inter, Arial, sans-serif" font-size="20">Rest it against the thumb base and ring finger.</text>
+  <rect x="846" y="484" width="282" height="118" rx="18" fill="#EFF7F3"/>
+  <text x="878" y="538" fill="#231D18" font-family="Georgia, serif" font-size="34" font-weight="700">Top stick moves</text>
+  <text x="878" y="578" fill="#62594E" font-family="Inter, Arial, sans-serif" font-size="20">Use the index and middle finger like a pencil grip.</text>
+  <path d="M342 185C390.301 185 429.46 224.159 429.46 272.46V326" stroke="#B88C4A" stroke-width="6" stroke-linecap="round" stroke-dasharray="10 12"/>
+  <path d="M852 483C777.842 483 717.73 422.888 717.73 348.73V312" stroke="#2C6C63" stroke-width="6" stroke-linecap="round" stroke-dasharray="10 12"/>
+</svg>

@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" role="img" aria-labelledby="title desc">
+  <title id="title">Chopsticks Guide logo</title>
+  <desc id="desc">A premium seal-style logo with bamboo chopsticks and a porcelain bowl.</desc>
+  <defs>
+    <linearGradient id="seal" x1="14" y1="8" x2="118" y2="122" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#7B8E4C"/>
+      <stop offset=".62" stop-color="#536B37"/>
+      <stop offset="1" stop-color="#31442B"/>
+    </linearGradient>
+    <linearGradient id="stick" x1="18" y1="20" x2="106" y2="106" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#D8B15D"/>
+      <stop offset=".58" stop-color="#9A6426"/>
+      <stop offset="1" stop-color="#5E3517"/>
+    </linearGradient>
+  </defs>
+  <rect x="8" y="8" width="112" height="112" rx="24" fill="url(#seal)"/>
+  <rect x="17" y="17" width="94" height="94" rx="18" fill="none" stroke="#F4E2B5" stroke-opacity=".55" stroke-width="4"/>
+  <ellipse cx="67" cy="78" rx="32" ry="18" fill="#FFF8E8"/>
+  <ellipse cx="67" cy="72" rx="25" ry="12" fill="#E4D3B6"/>
+  <path d="M44 72c10 8 36 8 48 0" stroke="#BFA66E" stroke-width="4" stroke-linecap="round"/>
+  <path d="M32 38h74" stroke="url(#stick)" stroke-width="8" stroke-linecap="round" transform="rotate(24 69 42)"/>
+  <path d="M28 50h78" stroke="url(#stick)" stroke-width="8" stroke-linecap="round" transform="rotate(24 67 54)"/>
+  <path d="M28 100H100" stroke="#F4E2B5" stroke-opacity=".65" stroke-width="4" stroke-linecap="round"/>
+</svg>

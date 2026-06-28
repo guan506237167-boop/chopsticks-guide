@@ -1,0 +1,62 @@
+﻿[
+  {
+    "id": "chopsticks-hero-atmosphere",
+    "prompt": "Premium atmospheric website hero image for an English chopsticks buying guide. Elegant bamboo chopsticks beside a white porcelain bowl on a refined Chinese tea table, bamboo forest light in the background, warm sunlight, subtle steam, tactile bamboo mat texture, high-end lifestyle photography, realistic depth of field, cinematic but clean, spacious composition, no text, no logo, no people, no hands, no brand marks.",
+    "ar": "16:9",
+    "image": "../../public/assets/generated/chopsticks-hero-atmosphere.png"
+  },
+  {
+    "id": "category-bamboo-chopsticks",
+    "prompt": "Realistic atmospheric category image for bamboo chopsticks. Close-up of natural bamboo chopsticks on a woven bamboo mat with bamboo leaves and soft morning light, premium product editorial style, tactile texture, shallow depth of field, no text, no logo, no people, no hands, no brand marks.",
+    "ar": "4:3",
+    "image": "../../public/assets/generated/category-bamboo-chopsticks.png"
+  },
+  {
+    "id": "category-wooden-chopsticks",
+    "prompt": "Realistic atmospheric category image for wooden chopsticks. Dark rosewood and walnut chopsticks arranged on a warm tea table with porcelain saucer and linen cloth, premium craft feeling, rich wood grain, soft side light, no text, no logo, no people, no hands, no brand marks.",
+    "ar": "4:3",
+    "image": "../../public/assets/generated/category-wooden-chopsticks.png"
+  },
+  {
+    "id": "category-metal-chopsticks",
+    "prompt": "Realistic atmospheric category image for metal chopsticks. Brushed stainless steel chopsticks on a minimalist Korean-style table setting with ceramic bowl and muted stone background, clean premium lighting, crisp reflections, no text, no logo, no people, no hands, no brand marks.",
+    "ar": "4:3",
+    "image": "../../public/assets/generated/category-metal-chopsticks.png"
+  },
+  {
+    "id": "category-training-chopsticks",
+    "prompt": "Friendly realistic category image for training chopsticks. Beginner training chopsticks placed beside simple practice foods on a bright table, soft natural light, clean and premium family learning atmosphere, no children, no hands, no text, no logo, no brand marks.",
+    "ar": "4:3",
+    "image": "../../public/assets/generated/category-training-chopsticks.png"
+  },
+  {
+    "id": "category-chopstick-rests",
+    "prompt": "Premium atmospheric category image for chopstick rests and holders. Elegant ceramic chopstick rests with chopsticks placed neatly on a refined dinner table, porcelain, tea cup, subtle Chinese dining culture, warm natural light, no text, no logo, no people, no hands, no brand marks.",
+    "ar": "4:3",
+    "image": "../../public/assets/generated/category-chopstick-rests.png"
+  },
+  {
+    "id": "category-gift-sets",
+    "prompt": "Premium atmospheric category image for chopstick gift sets. Elegant boxed chopstick set on a refined table with silk-like fabric, tea cup, and subtle bamboo background, gift-ready premium cultural product feeling, no text, no logo, no people, no hands, no brand marks.",
+    "ar": "4:3",
+    "image": "../../public/assets/generated/category-gift-sets.png"
+  },
+  {
+    "id": "guide-how-to-use-chopsticks",
+    "prompt": "Instructional but elegant article image for learning how to use chopsticks. Close-up composition of chopsticks positioned step-by-step over a neutral table with simple food pieces for practice, clear educational layout, premium realistic lighting, no hands, no text, no logo, no brand marks.",
+    "ar": "16:9",
+    "image": "../../public/assets/generated/guide-how-to-use-chopsticks.png"
+  },
+  {
+    "id": "guide-chopstick-etiquette",
+    "prompt": "Atmospheric article image for chopstick etiquette. Refined East Asian table setting with chopsticks placed neatly on a chopstick rest beside porcelain dishes and tea, clean formal dining mood, warm elegant light, no text, no logo, no people, no hands, no brand marks.",
+    "ar": "16:9",
+    "image": "../../public/assets/generated/guide-chopstick-etiquette.png"
+  },
+  {
+    "id": "guide-material-comparison",
+    "prompt": "Premium article image for chopstick material comparison. Bamboo, dark wood, metal, and fiberglass chopsticks arranged in parallel on a neutral table, clear material contrast, realistic product editorial photography, soft shadows, no text, no logo, no people, no hands, no brand marks.",
+    "ar": "16:9",
+    "image": "../../public/assets/generated/guide-material-comparison.png"
+  }
+]
