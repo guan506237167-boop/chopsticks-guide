@@ -215,7 +215,7 @@ await mkdir("dist/assets", { recursive: true });
 await copyDir("public/assets", "dist/assets");
 await copyFile("public/_headers", "dist/_headers");
 for (const file of await readdir("public")) {
-  if (file.endsWith(".html") || file === "_redirects") {
+  if (file.endsWith(".html")) {
     await copyFile(join("public", file), join("dist", file));
   }
 }
