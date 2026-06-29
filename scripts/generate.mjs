@@ -8,7 +8,7 @@ const SITE = {
   assetVersion: "20260628-commerce-03"
 };
 
-const GA_MEASUREMENT_ID = process.env.GA_MEASUREMENT_ID || "";
+const GA_MEASUREMENT_ID = process.env.GA_MEASUREMENT_ID || "G-3QWR0HFBYC";
 
 const keywordRows = parseCsv(await readFile("docs/keyword-library/chopsticks-keyword-library.csv", "utf8"));
 const tutorialKeywords = keywordRows.filter((row) => row.category === "tutorial").slice(0, 24);
