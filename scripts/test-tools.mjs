@@ -5,7 +5,8 @@ const howTo = await readFile("dist/how-to-use-chopsticks/index.html", "utf8");
 const types = await readFile("dist/types-of-chopsticks/index.html", "utf8");
 const etiquette = await readFile("dist/chopstick-etiquette/index.html", "utf8");
 
-assert(html.includes("Find the right learning or buying path"), "Home page should contain starter tool");
+assert(html.includes("Quick Advisor"), "Home page should contain the quick advisor");
+assert(html.includes("Shop beginner picks"), "Home page should contain product-led beginner entry");
 assert(howTo.includes("How to hold chopsticks step by step"), "How-to page should contain the step guide");
 assert(types.includes("Quick comparison table"), "Types page should contain comparison table");
 assert(etiquette.includes("Everyday etiquette rules that solve most problems"), "Etiquette page should contain etiquette rules section");

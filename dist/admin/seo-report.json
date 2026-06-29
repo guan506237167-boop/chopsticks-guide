@@ -1,0 +1,293 @@
+{
+  "generatedAt": "2026-06-29T00:25:45.302Z",
+  "totals": {
+    "average": 95,
+    "pages": 23,
+    "pass": 19,
+    "review": 4,
+    "fix": 0
+  },
+  "reports": [
+    {
+      "path": "/",
+      "score": 100,
+      "titleLength": 62,
+      "descriptionLength": 135,
+      "wordCount": 603,
+      "h1": 1,
+      "h2": 6,
+      "faqs": 0,
+      "issues": []
+    },
+    {
+      "path": "/guides/",
+      "score": 84,
+      "titleLength": 74,
+      "descriptionLength": 124,
+      "wordCount": 416,
+      "h1": 1,
+      "h2": 4,
+      "faqs": 0,
+      "issues": [
+        "title length",
+        "missing FAQ"
+      ]
+    },
+    {
+      "path": "/how-to-use-chopsticks/",
+      "score": 100,
+      "titleLength": 64,
+      "descriptionLength": 121,
+      "wordCount": 825,
+      "h1": 1,
+      "h2": 10,
+      "faqs": 6,
+      "issues": []
+    },
+    {
+      "path": "/types-of-chopsticks/",
+      "score": 96,
+      "titleLength": 73,
+      "descriptionLength": 110,
+      "wordCount": 764,
+      "h1": 1,
+      "h2": 6,
+      "faqs": 6,
+      "issues": [
+        "title length"
+      ]
+    },
+    {
+      "path": "/chopstick-etiquette/",
+      "score": 100,
+      "titleLength": 69,
+      "descriptionLength": 126,
+      "wordCount": 579,
+      "h1": 1,
+      "h2": 6,
+      "faqs": 6,
+      "issues": []
+    },
+    {
+      "path": "/best-chopsticks-for-beginners/",
+      "score": 100,
+      "titleLength": 72,
+      "descriptionLength": 105,
+      "wordCount": 563,
+      "h1": 1,
+      "h2": 4,
+      "faqs": 6,
+      "issues": []
+    },
+    {
+      "path": "/materials/chopstick-material-compare/",
+      "score": 100,
+      "titleLength": 72,
+      "descriptionLength": 98,
+      "wordCount": 573,
+      "h1": 1,
+      "h2": 5,
+      "faqs": 6,
+      "issues": []
+    },
+    {
+      "path": "/about/",
+      "score": 92,
+      "titleLength": 78,
+      "descriptionLength": 157,
+      "wordCount": 238,
+      "h1": 1,
+      "h2": 2,
+      "faqs": 0,
+      "issues": [
+        "title length"
+      ]
+    },
+    {
+      "path": "/contact/",
+      "score": 92,
+      "titleLength": 68,
+      "descriptionLength": 141,
+      "wordCount": 184,
+      "h1": 1,
+      "h2": 2,
+      "faqs": 0,
+      "issues": [
+        "thin content"
+      ]
+    },
+    {
+      "path": "/privacy/",
+      "score": 92,
+      "titleLength": 70,
+      "descriptionLength": 148,
+      "wordCount": 156,
+      "h1": 1,
+      "h2": 3,
+      "faqs": 0,
+      "issues": [
+        "thin content"
+      ]
+    },
+    {
+      "path": "/terms/",
+      "score": 92,
+      "titleLength": 63,
+      "descriptionLength": 145,
+      "wordCount": 133,
+      "h1": 1,
+      "h2": 3,
+      "faqs": 0,
+      "issues": [
+        "thin content"
+      ]
+    },
+    {
+      "path": "/materials/bamboo-chopsticks/",
+      "score": 100,
+      "titleLength": 54,
+      "descriptionLength": 90,
+      "wordCount": 381,
+      "h1": 1,
+      "h2": 4,
+      "faqs": 6,
+      "issues": []
+    },
+    {
+      "path": "/materials/wooden-chopsticks/",
+      "score": 100,
+      "titleLength": 54,
+      "descriptionLength": 90,
+      "wordCount": 387,
+      "h1": 1,
+      "h2": 4,
+      "faqs": 6,
+      "issues": []
+    },
+    {
+      "path": "/materials/metal-chopsticks/",
+      "score": 92,
+      "titleLength": 53,
+      "descriptionLength": 89,
+      "wordCount": 376,
+      "h1": 1,
+      "h2": 4,
+      "faqs": 6,
+      "issues": [
+        "description length"
+      ]
+    },
+    {
+      "path": "/materials/fiberglass-chopsticks/",
+      "score": 100,
+      "titleLength": 58,
+      "descriptionLength": 94,
+      "wordCount": 393,
+      "h1": 1,
+      "h2": 4,
+      "faqs": 6,
+      "issues": []
+    },
+    {
+      "path": "/materials/training-chopsticks/",
+      "score": 100,
+      "titleLength": 56,
+      "descriptionLength": 92,
+      "wordCount": 385,
+      "h1": 1,
+      "h2": 4,
+      "faqs": 6,
+      "issues": []
+    },
+    {
+      "path": "/guides/how-to-hold-chopsticks/",
+      "score": 84,
+      "titleLength": 32,
+      "descriptionLength": 82,
+      "wordCount": 438,
+      "h1": 1,
+      "h2": 4,
+      "faqs": 6,
+      "issues": [
+        "title length",
+        "description length"
+      ]
+    },
+    {
+      "path": "/guides/how-to-eat-rice-with-chopsticks/",
+      "score": 84,
+      "titleLength": 31,
+      "descriptionLength": 82,
+      "wordCount": 450,
+      "h1": 1,
+      "h2": 4,
+      "faqs": 6,
+      "issues": [
+        "title length",
+        "description length"
+      ]
+    },
+    {
+      "path": "/guides/bamboo-vs-wooden-vs-metal-chopsticks/",
+      "score": 100,
+      "titleLength": 36,
+      "descriptionLength": 95,
+      "wordCount": 415,
+      "h1": 1,
+      "h2": 4,
+      "faqs": 6,
+      "issues": []
+    },
+    {
+      "path": "/guides/chinese-vs-japanese-vs-korean-chopsticks/",
+      "score": 100,
+      "titleLength": 40,
+      "descriptionLength": 104,
+      "wordCount": 427,
+      "h1": 1,
+      "h2": 4,
+      "faqs": 6,
+      "issues": []
+    },
+    {
+      "path": "/guides/training-chopsticks-for-kids/",
+      "score": 84,
+      "titleLength": 28,
+      "descriptionLength": 87,
+      "wordCount": 419,
+      "h1": 1,
+      "h2": 4,
+      "faqs": 6,
+      "issues": [
+        "title length",
+        "description length"
+      ]
+    },
+    {
+      "path": "/guides/chopstick-rest-guide/",
+      "score": 92,
+      "titleLength": 31,
+      "descriptionLength": 92,
+      "wordCount": 425,
+      "h1": 1,
+      "h2": 4,
+      "faqs": 6,
+      "issues": [
+        "title length"
+      ]
+    },
+    {
+      "path": "/chopsticks-faq/",
+      "score": 92,
+      "titleLength": 14,
+      "descriptionLength": 102,
+      "wordCount": 260,
+      "h1": 1,
+      "h2": 2,
+      "faqs": 6,
+      "issues": [
+        "title length"
+      ]
+    }
+  ]
+}
