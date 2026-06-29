@@ -429,6 +429,7 @@ function pageLayout({ title, description, path, h1, intro, body, faqs = [], page
         <span>Site</span>
         <a href="/about/">About</a>
         <a href="/contact/">Contact</a>
+        <a href="/chopsticks-faq/">FAQ</a>
         <a href="/privacy/">Privacy</a>
         <a href="/terms/">Terms</a>
       </div>
@@ -771,7 +772,7 @@ await writePage("/", pageLayout({
 }));
 
 await writePage("/guides/", pageLayout({
-  title: "Chopsticks Guides: Beginner Steps, Etiquette, Materials, and Buying Advice",
+  title: "Chopsticks Guides: Beginner Steps, Etiquette, and Materials",
   description: "Browse all chopsticks guides covering how to use chopsticks, etiquette, materials, beginner picks, and cultural differences.",
   path: "/guides/",
   h1: "Chopsticks Guides",
@@ -910,7 +911,7 @@ await writePage("/how-to-use-chopsticks/", pageLayout({
 }));
 
 await writePage("/types-of-chopsticks/", pageLayout({
-  title: "Types of Chopsticks: Bamboo, Wooden, Metal, Fiberglass, and Training Sets",
+  title: "Types of Chopsticks: Bamboo, Wood, Metal, and Training Sets",
   description: "Compare common types of chopsticks by material, grip, durability, beginner friendliness, and common use cases.",
   path: "/types-of-chopsticks/",
   h1: "Types of Chopsticks",
@@ -1004,8 +1005,8 @@ await writePage("/chopstick-etiquette/", pageLayout({
 }));
 
 await writePage("/best-chopsticks-for-beginners/", pageLayout({
-  title: "Best Chopsticks for Beginners: Grip, Length, Material, and Starter Picks",
-  description: "Find the best chopsticks for beginners by comparing grip, length, material, weight, and training support.",
+  title: "Best Chopsticks for Beginners: Grip, Length, and Material",
+  description: "Find the best chopsticks for beginners by comparing grip, length, material, weight, training support, and starter-use comfort.",
   path: "/best-chopsticks-for-beginners/",
   h1: "Best Chopsticks for Beginners",
   intro: "For beginners, the best chopsticks are usually stable, not too heavy, not too slippery, and easy to control before speed matters.",
@@ -1050,8 +1051,8 @@ await writePage("/best-chopsticks-for-beginners/", pageLayout({
 }));
 
 await writePage("/materials/chopstick-material-compare/", pageLayout({
-  title: "Chopstick Material Comparison: Bamboo, Wood, Metal, Fiberglass, and More",
-  description: "Compare chopstick materials by grip, cleaning, durability, weight, and who each option suits best.",
+  title: "Chopstick Material Comparison: Bamboo, Wood, Metal, and More",
+  description: "Compare chopstick materials by grip, cleaning, durability, weight, surface texture, and who each option suits best.",
   path: "/materials/chopstick-material-compare/",
   h1: "Chopstick Material Comparison",
   intro: "Material changes grip, maintenance, weight, and the beginner learning curve, so comparison matters before buying.",
@@ -1080,7 +1081,7 @@ await writePage("/materials/chopstick-material-compare/", pageLayout({
 }));
 
 await writePage("/about/", simpleInfoPage({
-  title: "About Chopsticks Guide: Practical Learning, Materials, and Etiquette Reference",
+  title: "About Chopsticks Guide: Learning, Materials, and Etiquette",
   description: "Learn what Chopsticks Guide covers, how the site is structured, and what kind of practical help it provides for learning, etiquette, and material comparison.",
   path: "/about/",
   h1: "About Chopsticks Guide",
@@ -1159,8 +1160,8 @@ await writePage("/materials/fiberglass-chopsticks/", materialPage(chopstickTypes
 await writePage("/materials/training-chopsticks/", materialPage(chopstickTypes[4]));
 
 await writePage("/guides/how-to-hold-chopsticks/", supportArticle({
-  title: "How to Hold Chopsticks Correctly",
-  description: "A finger-placement guide for better chopstick control and fewer beginner mistakes.",
+  title: "How to Hold Chopsticks Correctly: Grip Guide",
+  description: "A detailed finger-placement guide for better chopstick control, lower-stick stability, smoother movement, and fewer beginner mistakes.",
   path: "/guides/how-to-hold-chopsticks/",
   h1: "How to Hold Chopsticks Correctly",
   intro: "Grip errors create most beginner frustration, so this guide focuses only on placement and control.",
@@ -1173,8 +1174,8 @@ await writePage("/guides/how-to-hold-chopsticks/", supportArticle({
 }));
 
 await writePage("/guides/how-to-eat-rice-with-chopsticks/", supportArticle({
-  title: "How to Eat Rice with Chopsticks",
-  description: "Practical ways to handle rice, noodles, and harder foods when learning chopsticks.",
+  title: "How to Eat Rice with Chopsticks: Food Control Guide",
+  description: "Practical ways to handle rice, noodles, ramen, slippery foods, and harder pieces while improving chopstick control.",
   path: "/guides/how-to-eat-rice-with-chopsticks/",
   h1: "How to Eat Rice with Chopsticks",
   intro: "Rice is one of the first foods that makes beginners feel stuck, but the problem is usually technique and food style, not inability.",
@@ -1188,7 +1189,7 @@ await writePage("/guides/how-to-eat-rice-with-chopsticks/", supportArticle({
 
 await writePage("/guides/bamboo-vs-wooden-vs-metal-chopsticks/", supportArticle({
   title: "Bamboo vs Wooden vs Metal Chopsticks",
-  description: "A practical comparison of the most common chopstick materials for grip, comfort, and daily use.",
+  description: "A practical comparison of common chopstick materials for grip, comfort, cleaning, durability, daily use, and beginner learning.",
   path: "/guides/bamboo-vs-wooden-vs-metal-chopsticks/",
   h1: "Bamboo vs Wooden vs Metal Chopsticks",
   intro: "The best material depends on grip, cleaning, and whether you are learning or buying for long-term use.",
@@ -1202,7 +1203,7 @@ await writePage("/guides/bamboo-vs-wooden-vs-metal-chopsticks/", supportArticle(
 
 await writePage("/guides/chinese-vs-japanese-vs-korean-chopsticks/", supportArticle({
   title: "Chinese vs Japanese vs Korean Chopsticks",
-  description: "Compare length, shape, and use differences across common Chinese, Japanese, and Korean chopstick styles.",
+  description: "Compare length, shape, material, table use, grip feel, and etiquette differences across Chinese, Japanese, and Korean chopstick styles.",
   path: "/guides/chinese-vs-japanese-vs-korean-chopsticks/",
   h1: "Chinese vs Japanese vs Korean Chopsticks",
   intro: "Style differences affect grip, table setting, and what feels easiest in different food contexts.",
@@ -1215,8 +1216,8 @@ await writePage("/guides/chinese-vs-japanese-vs-korean-chopsticks/", supportArti
 }));
 
 await writePage("/guides/training-chopsticks-for-kids/", supportArticle({
-  title: "Training Chopsticks for Kids",
-  description: "How training chopsticks help children and beginners learn finger placement more easily.",
+  title: "Training Chopsticks for Kids and Beginners",
+  description: "How training chopsticks help children and first-time learners practice finger placement, grip control, and basic movement more easily.",
   path: "/guides/training-chopsticks-for-kids/",
   h1: "Training Chopsticks for Kids",
   intro: "Training chopsticks can reduce frustration, but they work best when used as a bridge to normal movement.",
@@ -1229,8 +1230,8 @@ await writePage("/guides/training-chopsticks-for-kids/", supportArticle({
 }));
 
 await writePage("/guides/chopstick-rest-guide/", supportArticle({
-  title: "Chopstick Rest and Holder Guide",
-  description: "Learn what chopstick rests and holders do, where to place them, and when they actually help.",
+  title: "Chopstick Rest and Holder Guide for Table Settings",
+  description: "Learn what chopstick rests and holders do, where to place them, when they help, and how they support cleaner table settings.",
   path: "/guides/chopstick-rest-guide/",
   h1: "Chopstick Rest and Holder Guide",
   intro: "Chopstick rests are a small accessory, but they solve both cleanliness and etiquette problems.",
@@ -1243,8 +1244,8 @@ await writePage("/guides/chopstick-rest-guide/", supportArticle({
 }));
 
 await writePage("/chopsticks-faq/", pageLayout({
-  title: "Chopsticks FAQ",
-  description: "Browse frequently asked questions about using chopsticks, etiquette, materials, and beginner learning.",
+  title: "Chopsticks FAQ: Use, Etiquette, Materials, and Learning",
+  description: "Browse frequently asked questions about using chopsticks, etiquette rules, material choices, beginner learning, and practical table use.",
   path: "/chopsticks-faq/",
   h1: "Chopsticks FAQ",
   intro: "Use the FAQ page when you need quick answers about grip, etiquette, or choosing the right kind of chopsticks.",
@@ -1312,7 +1313,7 @@ function supportArticle({ title, description, path, h1, intro, answer, details, 
 function materialPage(item) {
   return pageLayout({
     title: `${item.name}: Grip, Use Cases, Pros, and Cautions`,
-    description: `Learn when ${item.name.toLowerCase()} make sense, who they help most, and what tradeoffs to expect.`,
+    description: `Learn when ${item.name.toLowerCase()} make sense, who they help most, what tradeoffs to expect, and how they compare for daily chopstick use.`,
     path: `/materials/${item.slug}/`,
     h1: item.name,
     intro: item.summary,
@@ -1399,7 +1400,6 @@ async function buildSeoReport() {
   const json = JSON.stringify({ generatedAt: new Date().toISOString(), totals, reports }, null, 2);
   await mkdir("dist/admin", { recursive: true });
   await writeFile("dist/admin/seo-report.json", json, "utf8");
-  await writePage("/admin/seo-report/", `<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Pre-Publish SEO Check</title><meta name="robots" content="noindex,nofollow"><meta name="description" content="Internal publishing QA report for Chopsticks Guide pages."><link rel="canonical" href="${absolute("/admin/seo-report/")}"><link rel="stylesheet" href="/styles.css?v=${SITE.assetVersion}"></head><body class="seo-report-page"><main><section class="content-section report-hero"><p class="eyebrow">Publishing QA</p><h1>Pre-Publish SEO Check</h1><p>Internal publishing checks for title, description, headings, FAQ, canonical, schema, sitemap, internal links, images, and content depth. This is not a user behavior or tool usage report.</p><div class="report-summary"><div><strong>${totals.average}</strong><span>Average score</span></div><div><strong>${totals.pages}</strong><span>Pages</span></div><div><strong>${totals.pass}</strong><span>Pass</span></div><div><strong>${totals.review}</strong><span>Review</span></div><div><strong>${totals.fix}</strong><span>Fix</span></div></div></section><section class="content-section report-rules"><h2>Publishing Gate</h2><p>Before pushing new articles, fix pages below 80, review warnings, then rebuild. The JSON version is available at <a href="/admin/seo-report.json">/admin/seo-report.json</a>.</p></section><section class="content-section"><div class="table-wrap"><table class="seo-table"><thead><tr><th>URL</th><th>Score</th><th>Title</th><th>Description</th><th>Words</th><th>H1/H2</th><th>FAQ</th><th>Issues</th></tr></thead><tbody>${rows}</tbody></table></div></section></main></body></html>`);
 }
 
 function auditPage(page, html, sitemap) {
