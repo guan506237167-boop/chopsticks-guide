@@ -1538,6 +1538,12 @@ body::before{content:"";position:fixed;inset:0;z-index:-1;pointer-events:none;ba
 .tone-rest::after{background:#9db18a}
 .tone-gift{background:linear-gradient(180deg,#fff8f0,#f4e0d3);border-color:#bd6c54}
 .tone-gift::after{background:#bd6c54}
+.type-card{grid-template-columns:56px minmax(0,1fr);grid-template-rows:auto auto auto;align-items:start;column-gap:18px;row-gap:8px;padding:24px 24px 28px;min-height:220px}
+.type-card .animal-seal{grid-column:1;grid-row:1 / 3;width:54px;height:54px}
+.type-card .animal-order{position:static!important;grid-column:2;grid-row:1;align-self:start;justify-self:start;max-width:100%;padding:5px 10px;border-radius:999px;background:rgba(255,255,255,.68);border:1px solid rgba(108,127,69,.24);color:#526b3a;font-size:12px;line-height:1.25;white-space:normal}
+.type-card strong{grid-column:2;grid-row:2;padding-right:0!important;margin-top:0;font-size:21px;line-height:1.16}
+.type-card>span:not(.animal-order):not(.animal-seal){grid-column:1 / -1;grid-row:3;margin-top:8px;color:#4d463f;font-size:16px;line-height:1.45}
+.type-card p{grid-column:1 / -1;grid-row:auto;margin-top:8px;line-height:1.62}
 .best-pick-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
 .best-pick-card{display:grid;grid-template-columns:auto minmax(0,1fr) auto;align-items:center;gap:16px;padding:18px;border:1px solid rgba(184,170,119,.5);border-radius:8px;background:linear-gradient(180deg,#fffdf8,#f4ebd8);box-shadow:0 12px 26px rgba(105,82,43,.08)}
 .pick-rank{display:grid;place-items:center;width:46px;height:46px;border-radius:50%;background:#566d3d;color:#fff7e5;font-weight:850}
@@ -1584,8 +1590,12 @@ body:not(.page-guides) .article-search h2{font-size:clamp(27px,2.5vw,34px);line-
 .site-search-form button{min-height:54px;border-radius:9px;padding:0 24px;font-size:15px}
 body:not(.page-home):not(.page-guides):not(.seo-report-page) .article-main>.content-section .eyebrow{margin-bottom:16px}
 body:not(.page-home):not(.page-guides):not(.seo-report-page) .article-main>.content-section h2{margin-top:0;margin-bottom:22px}
-body:not(.page-home):not(.page-guides):not(.seo-report-page) .table-wrap{margin-top:8px;border-radius:8px;overflow:auto}
-body:not(.page-home):not(.page-guides):not(.seo-report-page) .content-section th,body:not(.page-home):not(.page-guides):not(.seo-report-page) .content-section td{padding:15px 18px}
+body:not(.page-home):not(.page-guides):not(.seo-report-page) .table-wrap{margin-top:12px;border:1px solid rgba(184,170,119,.62);border-radius:8px;overflow:auto;background:#fffdf8;box-shadow:0 10px 24px rgba(105,82,43,.06)}
+body:not(.page-home):not(.page-guides):not(.seo-report-page) .content-section table{border-collapse:separate;border-spacing:0;background:#fffdf8}
+body:not(.page-home):not(.page-guides):not(.seo-report-page) .content-section th,body:not(.page-home):not(.page-guides):not(.seo-report-page) .content-section td{padding:15px 18px;border-right:1px solid rgba(184,170,119,.44);border-bottom:1px solid rgba(184,170,119,.44);vertical-align:top}
+body:not(.page-home):not(.page-guides):not(.seo-report-page) .content-section th:last-child,body:not(.page-home):not(.page-guides):not(.seo-report-page) .content-section td:last-child{border-right:0}
+body:not(.page-home):not(.page-guides):not(.seo-report-page) .content-section tbody tr:nth-child(even) td{background:#fbf5e8}
+body:not(.page-home):not(.page-guides):not(.seo-report-page) .content-section tbody tr:last-child td{border-bottom:0}
 @media(max-width:980px){.product-category-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.best-pick-grid{grid-template-columns:1fr}.best-pick-card{grid-template-columns:auto minmax(0,1fr)}.best-pick-card .button-link{grid-column:2;justify-self:start}body:not(.page-guides) .article-search h2{white-space:normal}.page-guides .article-search{grid-template-columns:1fr}}
 @media(max-width:640px){.hero-product-links{display:grid}.product-category-grid{grid-template-columns:1fr}.best-pick-card{grid-template-columns:1fr}.best-pick-card .button-link{grid-column:auto}.pick-rank{width:40px;height:40px}.article-search{padding:22px!important;gap:18px}.site-search-form{grid-template-columns:1fr}.site-search-form button{width:100%}.page-guides .content-section:not(.article-search){padding:24px!important}.page-guides .guide-card{padding:20px!important}body:not(.page-home):not(.page-guides):not(.seo-report-page) .article-main>.content-section{padding:24px!important}body:not(.page-home):not(.page-guides):not(.seo-report-page) .article-shell{gap:22px}}
 
