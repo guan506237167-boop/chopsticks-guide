@@ -135,6 +135,18 @@ const guides = [
     path: "/guides/how-to-eat-noodles-with-chopsticks/",
     category: "Beginner Guides",
     description: "Practical noodle control tips for ramen, lo mein, long noodles, slippery foods, and beginner practice."
+  },
+  {
+    title: "Stainless Steel Chopsticks",
+    path: "/guides/stainless-steel-chopsticks/",
+    category: "Buying Guides",
+    description: "A buying guide for stainless steel chopsticks, grip, cleaning, durability, and beginner tradeoffs."
+  },
+  {
+    title: "Wooden Chopsticks",
+    path: "/guides/wooden-chopsticks/",
+    category: "Buying Guides",
+    description: "A practical guide to wooden chopsticks for daily meals, gifts, grip, care, and material choice."
   }
 ];
 
@@ -1281,6 +1293,34 @@ await writePage("/guides/how-to-eat-noodles-with-chopsticks/", supportArticle({
     "If the noodles keep sliding, the problem is usually portion size or chopstick angle. Try a smaller bite and keep the chopstick tips closer together before lifting."
   ],
   related: [guides[0], guides[2], guides[10], guides[6]].filter(Boolean)
+}));
+
+await writePage("/guides/stainless-steel-chopsticks/", supportArticle({
+  title: "Stainless Steel Chopsticks: Buying Guide, Pros, Cons, and Best Uses",
+  description: "Compare stainless steel chopsticks for durability, cleaning, grip, weight, beginner use, Korean-style sets, and daily dining.",
+  path: "/guides/stainless-steel-chopsticks/",
+  h1: "Stainless Steel Chopsticks",
+  intro: "Stainless steel chopsticks are a strong commercial topic because buyers care about durability, cleaning, and long-term daily use.",
+  answer: "Stainless steel chopsticks are durable, easy to clean, and reusable, but they can feel smoother and heavier than bamboo or wooden chopsticks. They are best for users who value hygiene and long-term use more than maximum beginner grip.",
+  details: [
+    "For first-time learners, textured stainless steel is usually easier than very smooth polished metal. Flat Korean-style chopsticks may also feel different from round Chinese or Japanese-style pairs.",
+    "Before buying, compare surface texture, tip grip, weight, dishwasher guidance, and whether the set includes rests or a storage case."
+  ],
+  related: [guides[4], guides[5], guides[6], { title: "Metal Chopsticks", path: "/materials/metal-chopsticks/", category: "Buying Guides", description: "Material profile for metal chopsticks." }]
+}));
+
+await writePage("/guides/wooden-chopsticks/", supportArticle({
+  title: "Wooden Chopsticks: Daily Use, Gift Sets, Care, and Buying Tips",
+  description: "Learn how wooden chopsticks compare for grip, comfort, gift sets, daily meals, cleaning, finish, and beginner-friendly buying choices.",
+  path: "/guides/wooden-chopsticks/",
+  h1: "Wooden Chopsticks",
+  intro: "Wooden chopsticks sit between simple bamboo pairs and polished gift sets, so they work well for daily use and product recommendations.",
+  answer: "Wooden chopsticks are comfortable, warm in the hand, and usually easier to grip than smooth metal chopsticks. They are good for home dining, gift sets, and learners who want a nicer pair without losing control.",
+  details: [
+    "The main tradeoff is maintenance. Some wooden chopsticks need gentler washing, full drying, and occasional replacement if the finish wears down.",
+    "When comparing wooden sets, look at wood type, surface texture, tip shape, finish safety, length, and whether the set is meant for daily use or decorative gifting."
+  ],
+  related: [guides[4], guides[5], guides[6], { title: "Wooden Chopsticks Material Guide", path: "/materials/wooden-chopsticks/", category: "Buying Guides", description: "Material profile for wooden chopsticks." }]
 }));
 
 await writePage("/chopsticks-faq/", pageLayout({
