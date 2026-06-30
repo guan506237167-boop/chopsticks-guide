@@ -1,9 +1,9 @@
 {
-  "generatedAt": "2026-06-30T00:24:30.074Z",
+  "generatedAt": "2026-06-30T09:34:04.257Z",
   "totals": {
     "average": 99,
-    "pages": 23,
-    "pass": 23,
+    "pages": 25,
+    "pass": 25,
     "review": 0,
     "fix": 0
   },
@@ -24,7 +24,7 @@
       "score": 92,
       "titleLength": 59,
       "descriptionLength": 124,
-      "wordCount": 415,
+      "wordCount": 460,
       "h1": 1,
       "h2": 4,
       "faqs": 0,
@@ -253,6 +253,28 @@
       "titleLength": 50,
       "descriptionLength": 124,
       "wordCount": 429,
+      "h1": 1,
+      "h2": 4,
+      "faqs": 6,
+      "issues": []
+    },
+    {
+      "path": "/guides/how-to-use-chopsticks-for-beginners/",
+      "score": 100,
+      "titleLength": 55,
+      "descriptionLength": 130,
+      "wordCount": 478,
+      "h1": 1,
+      "h2": 4,
+      "faqs": 6,
+      "issues": []
+    },
+    {
+      "path": "/guides/how-to-eat-noodles-with-chopsticks/",
+      "score": 100,
+      "titleLength": 62,
+      "descriptionLength": 141,
+      "wordCount": 490,
       "h1": 1,
       "h2": 4,
       "faqs": 6,

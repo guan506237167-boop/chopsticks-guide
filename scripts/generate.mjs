@@ -123,6 +123,18 @@ const guides = [
     path: "/guides/chopstick-rest-guide/",
     category: "Accessories Guides",
     description: "What chopstick rests and holders do, how to place them, and what to buy."
+  },
+  {
+    title: "How to Use Chopsticks for Beginners",
+    path: "/guides/how-to-use-chopsticks-for-beginners/",
+    category: "Beginner Guides",
+    description: "A slower beginner guide for first-time chopstick users, hand position, practice food, and mistakes."
+  },
+  {
+    title: "How to Eat Noodles with Chopsticks",
+    path: "/guides/how-to-eat-noodles-with-chopsticks/",
+    category: "Beginner Guides",
+    description: "Practical noodle control tips for ramen, lo mein, long noodles, slippery foods, and beginner practice."
   }
 ];
 
@@ -1241,6 +1253,34 @@ await writePage("/guides/chopstick-rest-guide/", supportArticle({
     "For home use, it can also make the table feel more organized and reduce the habit of laying chopsticks across random surfaces."
   ],
   related: [guides[3], guides[4], guides[6]].filter(Boolean)
+}));
+
+await writePage("/guides/how-to-use-chopsticks-for-beginners/", supportArticle({
+  title: "How to Use Chopsticks for Beginners: Simple First Steps",
+  description: "Learn how to use chopsticks for beginners with simple grip steps, practice foods, common mistakes, and a realistic learning order.",
+  path: "/guides/how-to-use-chopsticks-for-beginners/",
+  h1: "How to Use Chopsticks for Beginners",
+  intro: "Beginners learn faster when the first goal is stable control, not perfect speed or restaurant-level technique.",
+  answer: "To use chopsticks as a beginner, stabilize the lower chopstick first, move only the upper chopstick, and practice with larger food pieces before trying rice or slippery noodles.",
+  details: [
+    "Start with food that is easy to grip, such as tofu cubes, dumpling pieces, or vegetables. Rice and noodles are useful later, but they can make the first practice session feel harder than it needs to be.",
+    "A good beginner session is short and repeated. Five minutes of correct grip practice usually helps more than forcing a long meal with a collapsing hand position."
+  ],
+  related: [guides[0], guides[1], guides[2], guides[6]].filter(Boolean)
+}));
+
+await writePage("/guides/how-to-eat-noodles-with-chopsticks/", supportArticle({
+  title: "How to Eat Noodles with Chopsticks: Ramen and Long Noodle Tips",
+  description: "Learn how to eat noodles with chopsticks, including ramen, lo mein, slippery noodles, lifting technique, bowl support, and beginner mistakes.",
+  path: "/guides/how-to-eat-noodles-with-chopsticks/",
+  h1: "How to Eat Noodles with Chopsticks",
+  intro: "Noodles need lift, support, and portion control, which makes them different from rice or small solid food.",
+  answer: "To eat noodles with chopsticks, lift a small bundle, support the strands against the bowl when needed, and avoid grabbing too many noodles at once. Smaller portions give better control and reduce slipping.",
+  details: [
+    "For ramen or soup noodles, lift fewer strands and let extra broth drip briefly before bringing the bite closer. For dry noodles, grip lower on the bundle and use the bowl edge for support if needed.",
+    "If the noodles keep sliding, the problem is usually portion size or chopstick angle. Try a smaller bite and keep the chopstick tips closer together before lifting."
+  ],
+  related: [guides[0], guides[2], guides[10], guides[6]].filter(Boolean)
 }));
 
 await writePage("/chopsticks-faq/", pageLayout({
