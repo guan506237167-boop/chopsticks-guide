@@ -147,6 +147,18 @@ const guides = [
     path: "/guides/wooden-chopsticks/",
     category: "Buying Guides",
     description: "A practical guide to wooden chopsticks for daily meals, gifts, grip, care, and material choice."
+  },
+  {
+    title: "Gold Chopsticks",
+    path: "/guides/gold-chopsticks/",
+    category: "Gift Guides",
+    description: "A buying and symbolism guide for gold chopsticks, gift sets, finishes, care, and practical tradeoffs."
+  },
+  {
+    title: "Disposable vs Reusable Chopsticks",
+    path: "/guides/disposable-vs-reusable-chopsticks/",
+    category: "Buying Guides",
+    description: "Compare disposable, bamboo, wooden, metal, and fiberglass chopsticks for home use, events, and takeout."
   }
 ];
 
@@ -1321,6 +1333,36 @@ await writePage("/guides/wooden-chopsticks/", supportArticle({
     "When comparing wooden sets, look at wood type, surface texture, tip shape, finish safety, length, and whether the set is meant for daily use or decorative gifting."
   ],
   related: [guides[4], guides[5], guides[6], { title: "Wooden Chopsticks Material Guide", path: "/materials/wooden-chopsticks/", category: "Buying Guides", description: "Material profile for wooden chopsticks." }]
+}));
+
+await writePage("/guides/gold-chopsticks/", supportArticle({
+  title: "Gold Chopsticks: Gift Meaning, Materials, Finishes, and Buying Notes",
+  description: "Learn what gold chopsticks usually mean, when they work as gifts, and how to compare gold-colored, plated, wooden, metal, and decorative chopstick sets.",
+  path: "/guides/gold-chopsticks/",
+  h1: "Gold Chopsticks",
+  intro: "Gold chopsticks are usually bought for gift presentation, festive dining, weddings, and decorative table settings rather than beginner practice.",
+  answer: "Gold chopsticks are best understood as a gift and presentation category. Most sets are gold-colored, gold-plated, lacquered, stainless steel, or decorated wood rather than solid gold, so buyers should check material, grip, care instructions, and whether the finish is food-safe.",
+  details: [
+    "For practical use, surface texture matters more than color. A polished gold finish can look premium but may feel slippery for beginners, especially with noodles, rice, or smooth foods.",
+    "For gift use, look for a complete set with a box, clear material description, matching rests, and care instructions. A beautiful set that cannot be cleaned easily will not work well for daily meals.",
+    "Gold chopsticks can carry a festive or auspicious look in many gift contexts, but the meaning depends on the occasion and design. Avoid presenting the color as a guaranteed luck symbol."
+  ],
+  related: [guides[4], guides[5], guides[6], guides[13]].filter(Boolean)
+}));
+
+await writePage("/guides/disposable-vs-reusable-chopsticks/", supportArticle({
+  title: "Disposable vs Reusable Chopsticks: Which Type Should You Choose?",
+  description: "Compare disposable and reusable chopsticks for takeout, events, home meals, beginner learning, cleaning, cost, and material choice.",
+  path: "/guides/disposable-vs-reusable-chopsticks/",
+  h1: "Disposable vs Reusable Chopsticks",
+  intro: "Disposable chopsticks and reusable chopsticks solve different problems, so the right choice depends on setting, cleaning, budget, and comfort.",
+  answer: "Disposable chopsticks are convenient for takeout, events, and one-time serving, while reusable chopsticks are better for home meals, gift sets, repeated practice, and long-term cost. For most homes, bamboo, wood, fiberglass, or metal reusable pairs are more useful than bulk disposable sets.",
+  details: [
+    "Choose disposable chopsticks when hygiene logistics, large groups, or takeout packaging matter more than long-term comfort. Check whether the product is individually wrapped and whether the surface feels splinter-free.",
+    "Choose reusable chopsticks when grip, table presentation, and repeated use matter. Beginners usually do better with bamboo or wooden pairs before moving to smooth metal sets.",
+    "For product pages later, this topic can support separate recommendations for takeout supplies, home starter sets, dishwasher-safe sets, and gift-ready reusable chopsticks."
+  ],
+  related: [guides[4], guides[5], guides[6], guides[12]].filter(Boolean)
 }));
 
 await writePage("/chopsticks-faq/", pageLayout({
