@@ -159,6 +159,12 @@ const guides = [
     path: "/guides/disposable-vs-reusable-chopsticks/",
     category: "Buying Guides",
     description: "Compare disposable, bamboo, wooden, metal, and fiberglass chopsticks for home use, events, and takeout."
+  },
+  {
+    title: "Chinese Chopsticks",
+    path: "/guides/chinese-chopsticks/",
+    category: "Culture Guides",
+    description: "A practical guide to Chinese chopsticks, including shape, length, materials, table use, etiquette, and buying notes."
   }
 ];
 
@@ -1450,6 +1456,34 @@ await writePage("/chopsticks-faq/", pageLayout({
   `
 }));
 
+await writePage("/guides/chinese-chopsticks/", supportArticle({
+  title: "Chinese Chopsticks: Shape, Materials, Table Use, and Buying Notes",
+  description: "Learn what Chinese chopsticks are like, how they differ from Japanese and Korean chopsticks, and how to choose a practical pair.",
+  path: "/guides/chinese-chopsticks/",
+  h1: "Chinese Chopsticks",
+  intro: "Chinese chopsticks are usually longer and more blunt-tipped than some other East Asian styles, which makes them useful for shared dishes, home meals, and broader table settings.",
+  answer: "Chinese chopsticks are commonly longer than Japanese chopsticks and often less sharp at the tip. They are used for shared dishes, rice, noodles, vegetables, hot pot, and daily meals, so the best pair should balance length, grip, material, cleaning, and table setting.",
+  details: [
+    "The term Chinese chopsticks can refer to everyday bamboo pairs, wooden home sets, restaurant pairs, cooking chopsticks, gift sets, or decorative tableware. The right choice depends on whether the user needs learning support, daily durability, formal presentation, or a cultural gift.",
+    "For beginners, the most practical Chinese-style pair is usually medium length, not too smooth, and not too heavy. Bamboo and wood often feel easier than polished metal because they provide more surface grip.",
+    "For buying pages later, this topic can connect product categories such as bamboo chopsticks, wooden chopsticks, gift sets, chopstick rests, hot pot chopsticks, and beginner training sets."
+  ],
+  sections: [
+    { title: "What makes Chinese chopsticks different", paragraphs: [
+      "Chinese chopsticks are often designed for a table where dishes are shared. Compared with shorter or sharper styles, many Chinese pairs are longer, more blunt at the tip, and simple in shape. That length can make it easier to reach shared plates, hot pot ingredients, and family-style dishes, although very long pairs may feel harder for complete beginners.",
+      "The shape varies by region, restaurant, and product type. Some pairs are round, some are square at the handle, and some taper gradually toward the tip. A square upper section can prevent rolling on the table, while a rounder body may feel smoother in the hand. For real use, the tip texture and balance matter more than the label alone."
+    ]},
+    { title: "Materials used for Chinese chopsticks", paragraphs: [
+      "Common materials include bamboo, wood, lacquered wood, melamine-style restaurant pairs, fiberglass, stainless steel, and decorative gift materials. Bamboo is lightweight and affordable. Wood feels warm and often gives better grip. Fiberglass is durable and practical for repeated home meals. Metal is easy to sanitize but can be slippery. Decorative lacquered pairs can look elegant but may require gentler care.",
+      "A product recommendation should not simply say one material is best. A learner needs grip. A restaurant needs cleaning convenience. A home cook may want durable reusable pairs. A gift buyer may care about box presentation, color, and matching rests. Separating those use cases is what makes a Chinese chopsticks page useful rather than generic."
+    ]},
+    { title: "Buying checklist for Chinese chopsticks", paragraphs: [
+      "Before buying Chinese chopsticks, check length, tip texture, weight, material, finish, cleaning method, and whether the set includes rests or a storage box. Beginners should avoid very slick tips and overly heavy pairs. Daily home users should consider cleaning and replacement. Gift buyers should check presentation and whether the pair is actually practical for eating.",
+      "A good product listing should show the full pair, tip close-up, material description, length, care instructions, and real table context. A polished product photo is not enough. If the listing hides the tip or does not explain the material, the pair may still look attractive but be hard to recommend responsibly."
+    ]}
+  ],
+  related: [guides[0], guides[3], guides[4], guides[7], guides[15]].filter(Boolean)
+}));
 await writeFile("dist/toolkit.js", clientScript(), "utf8");
 await writeFile("dist/styles.css", css() + themeCss(), "utf8");
 await writeFile("dist/sitemap.xml", sitemapXml(), "utf8");
