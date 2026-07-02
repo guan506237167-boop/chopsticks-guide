@@ -1,9 +1,9 @@
 {
-  "generatedAt": "2026-07-02T23:30:47.913Z",
+  "generatedAt": "2026-07-02T23:45:14.896Z",
   "totals": {
     "average": 99,
-    "pages": 30,
-    "pass": 30,
+    "pages": 31,
+    "pass": 31,
     "review": 0,
     "fix": 0
   },
@@ -24,7 +24,7 @@
       "score": 92,
       "titleLength": 59,
       "descriptionLength": 124,
-      "wordCount": 553,
+      "wordCount": 574,
       "h1": 1,
       "h2": 4,
       "faqs": 0,
@@ -341,6 +341,17 @@
       "titleLength": 65,
       "descriptionLength": 128,
       "wordCount": 1506,
+      "h1": 1,
+      "h2": 9,
+      "faqs": 6,
+      "issues": []
+    },
+    {
+      "path": "/guides/chopsticks-set/",
+      "score": 100,
+      "titleLength": 68,
+      "descriptionLength": 114,
+      "wordCount": 1511,
       "h1": 1,
       "h2": 9,
       "faqs": 6,

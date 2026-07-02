@@ -165,6 +165,12 @@ const guides = [
     path: "/guides/chinese-chopsticks/",
     category: "Culture Guides",
     description: "A practical guide to Chinese chopsticks, including shape, length, materials, table use, etiquette, and buying notes."
+  },
+  {
+    title: "Chopsticks Set",
+    path: "/guides/chopsticks-set/",
+    category: "Buying Guides",
+    description: "A buying guide to chopsticks sets, including pair count, materials, rests, gift boxes, care, and table use."
   }
 ];
 
@@ -1484,6 +1490,35 @@ await writePage("/guides/chinese-chopsticks/", supportArticle({
   ],
   related: [guides[0], guides[3], guides[4], guides[7], guides[15]].filter(Boolean)
 }));
+await writePage("/guides/chopsticks-set/", supportArticle({
+  title: "Chopsticks Set: Materials, Pair Count, Gift Boxes, and Buying Checks",
+  description: "Choose a chopsticks set by material, pair count, grip, rests, gift packaging, cleaning method, and real table use.",
+  path: "/guides/chopsticks-set/",
+  h1: "Chopsticks Set",
+  intro: "A chopsticks set is more than several pairs in a box. The right set depends on material, pair count, table setting, cleaning routine, and whether it is for daily meals, guests, or gifting.",
+  answer: "A good chopsticks set should match the user's use case: daily family meals, beginner practice, formal table settings, hot pot, restaurant-style serving, or cultural gifts. Compare material, grip texture, length, weight, pair count, included rests, storage box, and care instructions before buying.",
+  details: [
+    "For home use, the most practical chopsticks set usually includes enough pairs for the household plus guests, uses a material that is easy to clean, and has tips that are not too slippery.",
+    "For gifts, packaging and visual finish matter, but they should not replace practical checks. A decorative box is useful only if the chopsticks themselves are comfortable, balanced, and clearly described.",
+    "For future affiliate blocks, this page can separate daily sets, beginner sets, gift sets, reusable family sets, chopstick-and-rest bundles, and premium decorative sets."
+  ],
+  sections: [
+    { title: "How to choose a chopsticks set by use case", paragraphs: [
+      "A daily chopsticks set should be durable, easy to wash, and comfortable enough for repeated meals. Bamboo, wood, fiberglass, and some dishwasher-safe reusable materials can all work, but the right choice depends on grip and care habits. A family that uses chopsticks every day needs replacement logic and cleaning convenience more than ornate decoration.",
+      "A guest or hosting set has a different job. It should look coordinated on the table, include enough matching pairs, and ideally work with chopstick rests or simple holders. A gift set needs still another evaluation: box presentation, color, cultural meaning, and whether the recipient can actually use the set comfortably. Treating all sets as the same product type leads to weak recommendations."
+    ]},
+    { title: "Pair count, rests, and packaging", paragraphs: [
+      "Pair count should match the setting. Two pairs can work for a couple or small gift. Five pairs are common for family use. Ten or more pairs make sense for gatherings, events, or restaurants. A good listing should make the number of pairs obvious, because buyers often compare price without noticing whether the set includes two pairs or ten pairs.",
+      "Chopstick rests, holders, boxes, and sleeves change how the set is used. Rests make table presentation cleaner. A storage box protects gift sets and keeps matched pairs together. Travel sleeves are useful for portable reusable chopsticks. These accessories are valuable when they solve a real use case, not when they only make the listing look fuller."
+    ]},
+    { title: "Material and care checklist", paragraphs: [
+      "Before buying, check material, finish, tip texture, length, weight, whether the set is dishwasher safe, and whether the product page explains care clearly. Wood and bamboo may feel warmer and easier to grip, but they often need gentler drying. Fiberglass can be practical for repeated use. Metal may be durable but can feel slippery for beginners. Lacquered or decorative sets need more care scrutiny.",
+      "A strong buying guide should also mention what to avoid: vague material descriptions, overly glossy tips for beginners, photos that hide the tip shape, unclear pair count, and gift boxes that look premium while the chopsticks themselves are generic. This keeps the page useful before specific product recommendations are added."
+    ]}
+  ],
+  related: [guides[4], guides[5], guides[6], guides[15], guides[16]].filter(Boolean)
+}));
+
 await writeFile("dist/toolkit.js", clientScript(), "utf8");
 await writeFile("dist/styles.css", css() + themeCss(), "utf8");
 await writeFile("dist/sitemap.xml", sitemapXml(), "utf8");
