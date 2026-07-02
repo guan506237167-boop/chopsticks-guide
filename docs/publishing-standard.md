@@ -103,6 +103,19 @@ In conclusion, we hope this article helped you. Thanks for reading.
 
 ## 3. SEO/GEO 结构标准
 
+### 3.0 Content depth gate
+
+Do not publish a new chopsticks article as a short placeholder.
+
+| Page type | Minimum visible words | Target words |
+|---|---:|---:|
+| New SEO/GEO guide | 800 | 900-1200 |
+| Product or buying guide | 800 | 1000-1400 |
+| Material comparison page | 700 | 900-1200 |
+| Tool/list/FAQ support page | Not forced | Judge by task completeness |
+
+Every new article must include a direct answer block, use-case explanation, comparison or checklist content, common mistakes, related guides, and page-specific FAQ. Existing short pages should be treated as rewrite candidates, not as the quality benchmark.
+
 | 项目 | 标准 |
 |---|---|
 | H1 | 每页仅 1 个 |
