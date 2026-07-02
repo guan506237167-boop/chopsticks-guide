@@ -1,7 +1,7 @@
 import { readFile } from "node:fs/promises";
 import { join } from "node:path";
 
-const minimumWords = 800;
+const minimumWords = 1000;
 const pages = [
   "/guides/gold-chopsticks/",
   "/guides/disposable-vs-reusable-chopsticks/"

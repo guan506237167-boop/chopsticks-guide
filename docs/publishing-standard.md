@@ -109,9 +109,9 @@ Do not publish a new chopsticks article as a short placeholder.
 
 | Page type | Minimum visible words | Target words |
 |---|---:|---:|
-| New SEO/GEO guide | 800 | 900-1200 |
-| Product or buying guide | 800 | 1000-1400 |
-| Material comparison page | 700 | 900-1200 |
+| New SEO/GEO guide | 1000 | 1000-1400 |
+| Product or buying guide | 1000 | 1000-1500 |
+| Material comparison page | 1000 | 1000-1300 |
 | Tool/list/FAQ support page | Not forced | Judge by task completeness |
 
 Every new article must include a direct answer block, use-case explanation, comparison or checklist content, common mistakes, related guides, and page-specific FAQ. Existing short pages should be treated as rewrite candidates, not as the quality benchmark.

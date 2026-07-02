@@ -1420,6 +1420,13 @@ await writePage("/guides/disposable-vs-reusable-chopsticks/", supportArticle({
         "For takeout businesses and events, look for wrapped disposable pairs, smooth finishing, bulk pricing, and reliable packaging. For home kitchens, start with a reusable set that is easy to grip and easy to clean. For beginners, avoid extremely slick metal or novelty shapes until the basic hand movement is stable.",
         "For future affiliate pages, this topic can split naturally into four product paths: bulk disposable chopsticks, beginner reusable sets, dishwasher-safe daily sets, and gift-ready chopstick sets. Keeping those paths separate will make recommendations clearer and prevent one page from mixing restaurant supply intent with home dining intent."
       ]
+    },
+    {
+      title: "How to make the final choice",
+      paragraphs: [
+        "The simplest decision rule is to match the chopsticks to the setting. If the meal is temporary, public, or difficult to clean up after, disposable chopsticks may be practical. If the chopsticks will be used at home every week, reusable pairs usually give better value, better grip choices, and a more pleasant table experience.",
+        "For mixed households, keeping both types can make sense. A small pack of wrapped disposable chopsticks covers takeout, guests, and outdoor meals, while a durable reusable set handles normal dining. The important point is not to treat disposable and reusable chopsticks as moral opposites; they solve different use cases, and the better choice depends on convenience, hygiene logistics, comfort, and long-term use."
+      ]
     }
   ],
   related: [guides[4], guides[5], guides[6], guides[12]].filter(Boolean)
@@ -1606,9 +1613,11 @@ function auditPage(page, html, sitemap) {
   if (page.path.startsWith("/guides/") || page.path === "/how-to-use-chopsticks/" || page.path === "/types-of-chopsticks/" || page.path === "/chopstick-etiquette/" || page.path === "/best-chopsticks-for-beginners/") {
     if (faqCount < 2) issues.push("missing FAQ");
   }
-  if (words.length < 220) issues.push("thin content");
+  if (requiresFullArticleDepth(page.path) && words.length < 1000) issues.push("thin content: under 1000 words");
+  else if (!requiresFullArticleDepth(page.path) && words.length < 220) issues.push("thin support content");
   let score = 100 - issues.length * 8;
-  if (words.length > 600) score += 4;
+  if (words.length >= 1000) score += 4;
+  if (requiresFullArticleDepth(page.path) && words.length < 1000) score = Math.min(score, 69);
   score = Math.max(54, Math.min(100, score));
   return {
     path: page.path,
@@ -1621,6 +1630,12 @@ function auditPage(page, html, sitemap) {
     faqs: faqCount,
     issues
   };
+}
+
+function requiresFullArticleDepth(path) {
+  if (["/", "/about/", "/contact/", "/privacy/", "/terms/", "/guides/", "/chopsticks-faq/"].includes(path)) return false;
+  if (path.startsWith("/admin/")) return false;
+  return true;
 }
 
 function clientScript() {
