@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-07-02T00:24:08.238Z",
+  "generatedAt": "2026-07-02T01:45:52.245Z",
   "totals": {
-    "average": 78,
+    "average": 83,
     "pages": 29,
-    "pass": 9,
+    "pass": 14,
     "review": 0,
-    "fix": 20
+    "fix": 15
   },
   "reports": [
     {
@@ -34,68 +34,58 @@
     },
     {
       "path": "/how-to-use-chopsticks/",
-      "score": 69,
+      "score": 100,
       "titleLength": 64,
       "descriptionLength": 121,
-      "wordCount": 826,
+      "wordCount": 1276,
       "h1": 1,
-      "h2": 10,
+      "h2": 11,
       "faqs": 6,
-      "issues": [
-        "thin content: under 1000 words"
-      ]
+      "issues": []
     },
     {
       "path": "/types-of-chopsticks/",
-      "score": 69,
+      "score": 100,
       "titleLength": 59,
       "descriptionLength": 110,
-      "wordCount": 762,
+      "wordCount": 1208,
       "h1": 1,
-      "h2": 6,
+      "h2": 7,
       "faqs": 6,
-      "issues": [
-        "thin content: under 1000 words"
-      ]
+      "issues": []
     },
     {
       "path": "/chopstick-etiquette/",
-      "score": 69,
+      "score": 100,
       "titleLength": 69,
       "descriptionLength": 126,
-      "wordCount": 581,
+      "wordCount": 1029,
       "h1": 1,
-      "h2": 6,
+      "h2": 7,
       "faqs": 6,
-      "issues": [
-        "thin content: under 1000 words"
-      ]
+      "issues": []
     },
     {
       "path": "/best-chopsticks-for-beginners/",
-      "score": 69,
+      "score": 100,
       "titleLength": 57,
       "descriptionLength": 126,
-      "wordCount": 563,
-      "h1": 1,
-      "h2": 4,
-      "faqs": 6,
-      "issues": [
-        "thin content: under 1000 words"
-      ]
-    },
-    {
-      "path": "/materials/chopstick-material-compare/",
-      "score": 69,
-      "titleLength": 60,
-      "descriptionLength": 115,
-      "wordCount": 573,
+      "wordCount": 1001,
       "h1": 1,
       "h2": 5,
       "faqs": 6,
-      "issues": [
-        "thin content: under 1000 words"
-      ]
+      "issues": []
+    },
+    {
+      "path": "/materials/chopstick-material-compare/",
+      "score": 100,
+      "titleLength": 60,
+      "descriptionLength": 115,
+      "wordCount": 1014,
+      "h1": 1,
+      "h2": 6,
+      "faqs": 6,
+      "issues": []
     },
     {
       "path": "/about/",
@@ -217,9 +207,9 @@
       "score": 69,
       "titleLength": 44,
       "descriptionLength": 134,
-      "wordCount": 441,
+      "wordCount": 845,
       "h1": 1,
-      "h2": 4,
+      "h2": 6,
       "faqs": 6,
       "issues": [
         "thin content: under 1000 words"
@@ -230,9 +220,9 @@
       "score": 69,
       "titleLength": 51,
       "descriptionLength": 115,
-      "wordCount": 454,
+      "wordCount": 858,
       "h1": 1,
-      "h2": 4,
+      "h2": 6,
       "faqs": 6,
       "issues": [
         "thin content: under 1000 words"
@@ -243,9 +233,9 @@
       "score": 69,
       "titleLength": 36,
       "descriptionLength": 127,
-      "wordCount": 416,
+      "wordCount": 820,
       "h1": 1,
-      "h2": 4,
+      "h2": 6,
       "faqs": 6,
       "issues": [
         "thin content: under 1000 words"
@@ -256,9 +246,9 @@
       "score": 69,
       "titleLength": 40,
       "descriptionLength": 135,
-      "wordCount": 428,
+      "wordCount": 832,
       "h1": 1,
-      "h2": 4,
+      "h2": 6,
       "faqs": 6,
       "issues": [
         "thin content: under 1000 words"
@@ -269,9 +259,9 @@
       "score": 69,
       "titleLength": 42,
       "descriptionLength": 134,
-      "wordCount": 422,
+      "wordCount": 826,
       "h1": 1,
-      "h2": 4,
+      "h2": 6,
       "faqs": 6,
       "issues": [
         "thin content: under 1000 words"
@@ -282,9 +272,9 @@
       "score": 69,
       "titleLength": 50,
       "descriptionLength": 124,
-      "wordCount": 429,
+      "wordCount": 833,
       "h1": 1,
-      "h2": 4,
+      "h2": 6,
       "faqs": 6,
       "issues": [
         "thin content: under 1000 words"
@@ -295,9 +285,9 @@
       "score": 69,
       "titleLength": 55,
       "descriptionLength": 130,
-      "wordCount": 478,
+      "wordCount": 882,
       "h1": 1,
-      "h2": 4,
+      "h2": 6,
       "faqs": 6,
       "issues": [
         "thin content: under 1000 words"
@@ -308,9 +298,9 @@
       "score": 69,
       "titleLength": 62,
       "descriptionLength": 141,
-      "wordCount": 490,
+      "wordCount": 894,
       "h1": 1,
-      "h2": 4,
+      "h2": 6,
       "faqs": 6,
       "issues": [
         "thin content: under 1000 words"
@@ -321,9 +311,9 @@
       "score": 69,
       "titleLength": 67,
       "descriptionLength": 125,
-      "wordCount": 461,
+      "wordCount": 865,
       "h1": 1,
-      "h2": 4,
+      "h2": 6,
       "faqs": 6,
       "issues": [
         "thin content: under 1000 words"
@@ -334,9 +324,9 @@
       "score": 69,
       "titleLength": 62,
       "descriptionLength": 134,
-      "wordCount": 463,
+      "wordCount": 867,
       "h1": 1,
-      "h2": 4,
+      "h2": 6,
       "faqs": 6,
       "issues": [
         "thin content: under 1000 words"
@@ -347,9 +337,9 @@
       "score": 100,
       "titleLength": 68,
       "descriptionLength": 152,
-      "wordCount": 1068,
+      "wordCount": 1472,
       "h1": 1,
-      "h2": 8,
+      "h2": 10,
       "faqs": 6,
       "issues": []
     },
@@ -358,9 +348,9 @@
       "score": 100,
       "titleLength": 64,
       "descriptionLength": 131,
-      "wordCount": 1090,
+      "wordCount": 1494,
       "h1": 1,
-      "h2": 9,
+      "h2": 11,
       "faqs": 6,
       "issues": []
     },

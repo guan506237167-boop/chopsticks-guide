@@ -3,6 +3,11 @@ import { join } from "node:path";
 
 const minimumWords = 1000;
 const pages = [
+  "/how-to-use-chopsticks/",
+  "/types-of-chopsticks/",
+  "/chopstick-etiquette/",
+  "/best-chopsticks-for-beginners/",
+  "/materials/chopstick-material-compare/",
   "/guides/gold-chopsticks/",
   "/guides/disposable-vs-reusable-chopsticks/"
 ];
