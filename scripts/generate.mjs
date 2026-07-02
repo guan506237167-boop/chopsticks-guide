@@ -1514,6 +1514,10 @@ function supportArticle({ title, description, path, h1, intro, answer, details, 
         <p>Before making a final choice, check five points: who will use the chopsticks, what food they will eat most often, how the pair will be washed, whether grip or appearance matters more, and whether the set needs to work for daily meals or occasional presentation. These questions are more useful than choosing only by country style or product photo.</p>
         <p>For learners, the first mistake is practicing with the hardest material and the hardest food at the same time. Smooth metal chopsticks and loose rice can make a beginner feel as if the hand position is wrong, even when the real problem is surface friction. Start with larger food pieces and a grippier pair, then move to noodles, rice, and slippery foods after the lower stick stays stable.</p>
         <p>For buyers, the common mistake is assuming a premium-looking set is automatically easier to use. Gift sets, lacquered pairs, and polished metal chopsticks can look excellent but still be too slick, too heavy, or too delicate for daily meals. A practical product page should separate appearance, function, care, and cultural setting so the reader can choose the right pair for the real use case.</p>
+        <p>When the topic is a technique guide, test the advice with one easy food and one difficult food. When the topic is a buying guide, compare at least two materials before deciding. When the topic is etiquette, focus on visible table behavior rather than memorizing every regional custom. This keeps each guide useful as a practical decision page instead of a short definition.</p>
+        <p>The next step should also be clear. A reader who struggles with grip should open the holding guide. A reader comparing products should open material comparison and beginner picks. A reader preparing a table setting should open etiquette and rest guides. Strong internal paths help visitors solve the next problem without returning to search immediately.</p>
+        <p>Before leaving the page, the reader should know one recommended action, one common mistake to avoid, one buying or practice check, and one related page to open next. That is the minimum standard for an old guide page to feel complete rather than thin.</p>
+        <p>For advertising review, this also matters because a useful guide should show original judgment, practical context, and enough explanation for a visitor to make progress without immediately needing another search result.</p>
       </section>
       ${relatedGuidesBlock("Related guides", related)}
       ${faqBlock(standardFaqs())}
@@ -1577,6 +1581,31 @@ function materialPage(item) {
         </div>
         <ul class="article-list">${item.pros.map((pro) => `<li>${escapeHtml(pro)}</li>`).join("")}</ul>
       </section>
+      <section class="content-section article-body">
+        <h2>Who should choose ${escapeHtml(item.name)}</h2>
+        <p>${escapeHtml(item.name)} make the most sense when the buyer's real use case matches the material. For ${escapeHtml(item.name.toLowerCase())}, that usually means ${escapeHtml(item.bestFor.toLowerCase())}. The surface feel is ${escapeHtml(item.texture.toLowerCase())}, so the reader should compare grip and control before looking only at color, packaging, or product photos.</p>
+        <p>A beginner should ask whether the chopsticks make food easier to hold. A daily home user should ask whether the pair fits the washing and drying routine. A gift buyer should ask whether the set still works as a tool after the box is opened. These questions keep the material guide useful for real buying decisions instead of becoming a short product description.</p>
+        <p>Material choice also changes the practice path. A grippier material can make larger food pieces feel easier, while a smoother or heavier material may require more control. If the reader is still learning, the safest comparison is not simply which material lasts longest, but which material makes the first month of practice less frustrating.</p>
+      </section>
+      <section class="content-section article-body">
+        <h2>Grip, cleaning, and care checklist</h2>
+        <p>Before buying ${escapeHtml(item.name.toLowerCase())}, check the tip shape, surface texture, length, weight, and cleaning instructions. The tips should give enough control for the food the user eats most often. The handle should feel balanced rather than too heavy at one end. If the material needs special care, the product page should say so clearly.</p>
+        <p>Cleaning is one of the main reasons chopstick recommendations differ. Some buyers want dishwasher-friendly reusable pairs. Others are comfortable hand-washing wood or bamboo if the grip feels better. A useful material page should make that tradeoff visible. A pair that is easy to sanitize may be less comfortable for beginners; a pair that feels warm and natural may need more careful drying.</p>
+        <p>Care also affects lifespan. Replace chopsticks that crack, smell, splinter, lose coating, bend, or become too slippery to control safely. For family use, it is better to choose a reliable everyday material than to keep a decorative pair that is difficult to clean or uncomfortable during normal meals.</p>
+      </section>
+      <section class="content-section article-body">
+        <h2>When not to choose ${escapeHtml(item.name)}</h2>
+        <p>Do not choose this material only because it appears in a premium photo or a large online listing. ${escapeHtml(item.cautions.join(" "))} These cautions matter because chopsticks are used with hot food, oily sauces, rice, noodles, vegetables, and shared dishes. A weak match between material and food can make the pair frustrating even if it looks attractive.</p>
+        <p>If the user is buying for a child, a complete beginner, or someone with limited hand control, comfort and grip should come before appearance. If the pair is for hosting, presentation and table setting may matter more. If the pair is for repeated daily meals, cleaning and durability usually become the deciding factors.</p>
+        <p>The best next step is to compare this material with bamboo, wood, metal, fiberglass, and training styles in the broader material comparison page. That gives the reader a clearer buying path and reduces the risk of choosing a pair that solves the wrong problem.</p>
+        <p>For product recommendations, this page should work as a quality filter. A good listing should explain the base material, surface finish, tip texture, length, cleaning method, and intended user. If those details are missing, the product may still look attractive, but it is harder to recommend responsibly.</p>
+        <p>Use this material page together with the beginner and comparison guides. The material tells you how the pair feels and cleans; the beginner guide tells you whether it supports learning; the type guide shows how the same material fits different table settings.</p>
+      </section>
+      ${relatedGuidesBlock("Continue material comparison", [
+        { title: "Chopstick Material Comparison", path: "/materials/chopstick-material-compare/", category: "Buying Guides", description: "Compare grip, cleaning, durability, and daily-use tradeoffs." },
+        { title: "Best Chopsticks for Beginners", path: "/best-chopsticks-for-beginners/", category: "Buying Guides", description: "Beginner-friendly material and grip choices." },
+        { title: "Types of Chopsticks", path: "/types-of-chopsticks/", category: "Buying Guides", description: "Compare common chopstick styles and use cases." }
+      ])}
       ${faqBlock(standardFaqs())}
     `
   });

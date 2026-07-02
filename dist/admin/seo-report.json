@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-07-02T01:45:52.245Z",
+  "generatedAt": "2026-07-02T03:20:17.223Z",
   "totals": {
-    "average": 83,
+    "average": 99,
     "pages": 29,
-    "pass": 14,
+    "pass": 29,
     "review": 0,
-    "fix": 15
+    "fix": 0
   },
   "reports": [
     {
@@ -139,205 +139,175 @@
     },
     {
       "path": "/materials/bamboo-chopsticks/",
-      "score": 69,
+      "score": 100,
       "titleLength": 54,
       "descriptionLength": 132,
-      "wordCount": 382,
+      "wordCount": 1022,
       "h1": 1,
-      "h2": 4,
+      "h2": 8,
       "faqs": 6,
-      "issues": [
-        "thin content: under 1000 words"
-      ]
+      "issues": []
     },
     {
       "path": "/materials/wooden-chopsticks/",
-      "score": 69,
+      "score": 100,
       "titleLength": 54,
       "descriptionLength": 132,
-      "wordCount": 388,
+      "wordCount": 1030,
       "h1": 1,
-      "h2": 4,
+      "h2": 8,
       "faqs": 6,
-      "issues": [
-        "thin content: under 1000 words"
-      ]
+      "issues": []
     },
     {
       "path": "/materials/metal-chopsticks/",
-      "score": 69,
+      "score": 100,
       "titleLength": 53,
       "descriptionLength": 131,
-      "wordCount": 377,
+      "wordCount": 1018,
       "h1": 1,
-      "h2": 4,
+      "h2": 8,
       "faqs": 6,
-      "issues": [
-        "thin content: under 1000 words"
-      ]
+      "issues": []
     },
     {
       "path": "/materials/fiberglass-chopsticks/",
-      "score": 69,
+      "score": 100,
       "titleLength": 58,
       "descriptionLength": 136,
-      "wordCount": 394,
+      "wordCount": 1035,
       "h1": 1,
-      "h2": 4,
+      "h2": 8,
       "faqs": 6,
-      "issues": [
-        "thin content: under 1000 words"
-      ]
+      "issues": []
     },
     {
       "path": "/materials/training-chopsticks/",
-      "score": 69,
+      "score": 100,
       "titleLength": 56,
       "descriptionLength": 134,
-      "wordCount": 386,
+      "wordCount": 1028,
       "h1": 1,
-      "h2": 4,
+      "h2": 8,
       "faqs": 6,
-      "issues": [
-        "thin content: under 1000 words"
-      ]
+      "issues": []
     },
     {
       "path": "/guides/how-to-hold-chopsticks/",
-      "score": 69,
+      "score": 100,
       "titleLength": 44,
       "descriptionLength": 134,
-      "wordCount": 845,
+      "wordCount": 1038,
       "h1": 1,
       "h2": 6,
       "faqs": 6,
-      "issues": [
-        "thin content: under 1000 words"
-      ]
+      "issues": []
     },
     {
       "path": "/guides/how-to-eat-rice-with-chopsticks/",
-      "score": 69,
+      "score": 100,
       "titleLength": 51,
       "descriptionLength": 115,
-      "wordCount": 858,
+      "wordCount": 1051,
       "h1": 1,
       "h2": 6,
       "faqs": 6,
-      "issues": [
-        "thin content: under 1000 words"
-      ]
+      "issues": []
     },
     {
       "path": "/guides/bamboo-vs-wooden-vs-metal-chopsticks/",
-      "score": 69,
+      "score": 100,
       "titleLength": 36,
       "descriptionLength": 127,
-      "wordCount": 820,
+      "wordCount": 1013,
       "h1": 1,
       "h2": 6,
       "faqs": 6,
-      "issues": [
-        "thin content: under 1000 words"
-      ]
+      "issues": []
     },
     {
       "path": "/guides/chinese-vs-japanese-vs-korean-chopsticks/",
-      "score": 69,
+      "score": 100,
       "titleLength": 40,
       "descriptionLength": 135,
-      "wordCount": 832,
+      "wordCount": 1025,
       "h1": 1,
       "h2": 6,
       "faqs": 6,
-      "issues": [
-        "thin content: under 1000 words"
-      ]
+      "issues": []
     },
     {
       "path": "/guides/training-chopsticks-for-kids/",
-      "score": 69,
+      "score": 100,
       "titleLength": 42,
       "descriptionLength": 134,
-      "wordCount": 826,
+      "wordCount": 1019,
       "h1": 1,
       "h2": 6,
       "faqs": 6,
-      "issues": [
-        "thin content: under 1000 words"
-      ]
+      "issues": []
     },
     {
       "path": "/guides/chopstick-rest-guide/",
-      "score": 69,
+      "score": 100,
       "titleLength": 50,
       "descriptionLength": 124,
-      "wordCount": 833,
+      "wordCount": 1026,
       "h1": 1,
       "h2": 6,
       "faqs": 6,
-      "issues": [
-        "thin content: under 1000 words"
-      ]
+      "issues": []
     },
     {
       "path": "/guides/how-to-use-chopsticks-for-beginners/",
-      "score": 69,
+      "score": 100,
       "titleLength": 55,
       "descriptionLength": 130,
-      "wordCount": 882,
+      "wordCount": 1075,
       "h1": 1,
       "h2": 6,
       "faqs": 6,
-      "issues": [
-        "thin content: under 1000 words"
-      ]
+      "issues": []
     },
     {
       "path": "/guides/how-to-eat-noodles-with-chopsticks/",
-      "score": 69,
+      "score": 100,
       "titleLength": 62,
       "descriptionLength": 141,
-      "wordCount": 894,
+      "wordCount": 1087,
       "h1": 1,
       "h2": 6,
       "faqs": 6,
-      "issues": [
-        "thin content: under 1000 words"
-      ]
+      "issues": []
     },
     {
       "path": "/guides/stainless-steel-chopsticks/",
-      "score": 69,
+      "score": 100,
       "titleLength": 67,
       "descriptionLength": 125,
-      "wordCount": 865,
+      "wordCount": 1058,
       "h1": 1,
       "h2": 6,
       "faqs": 6,
-      "issues": [
-        "thin content: under 1000 words"
-      ]
+      "issues": []
     },
     {
       "path": "/guides/wooden-chopsticks/",
-      "score": 69,
+      "score": 100,
       "titleLength": 62,
       "descriptionLength": 134,
-      "wordCount": 867,
+      "wordCount": 1060,
       "h1": 1,
       "h2": 6,
       "faqs": 6,
-      "issues": [
-        "thin content: under 1000 words"
-      ]
+      "issues": []
     },
     {
       "path": "/guides/gold-chopsticks/",
       "score": 100,
       "titleLength": 68,
       "descriptionLength": 152,
-      "wordCount": 1472,
+      "wordCount": 1665,
       "h1": 1,
       "h2": 10,
       "faqs": 6,
@@ -348,7 +318,7 @@
       "score": 100,
       "titleLength": 64,
       "descriptionLength": 131,
-      "wordCount": 1494,
+      "wordCount": 1687,
       "h1": 1,
       "h2": 11,
       "faqs": 6,
