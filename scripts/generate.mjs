@@ -1466,7 +1466,7 @@ await writePage("/guides/chinese-chopsticks/", supportArticle({
   title: "Chinese Chopsticks: Shape, Materials, Table Use, and Buying Notes",
   description: "Learn what Chinese chopsticks are like, how they differ from Japanese and Korean chopsticks, and how to choose a practical pair.",
   path: "/guides/chinese-chopsticks/",
-  h1: "Chinese Chopsticks",
+  h1: "Chinese Chopsticks: Shape, Materials, Table Use, and Buying Notes",
   intro: "Chinese chopsticks are usually longer and more blunt-tipped than some other East Asian styles, which makes them useful for shared dishes, home meals, and broader table settings.",
   answer: "Chinese chopsticks are commonly longer than Japanese chopsticks and often less sharp at the tip. They are used for shared dishes, rice, noodles, vegetables, hot pot, and daily meals, so the best pair should balance length, grip, material, cleaning, and table setting.",
   details: [
@@ -1494,7 +1494,7 @@ await writePage("/guides/chopsticks-set/", supportArticle({
   title: "Chopsticks Set: Materials, Pair Count, Gift Boxes, and Buying Checks",
   description: "Choose a chopsticks set by material, pair count, grip, rests, gift packaging, cleaning method, and real table use.",
   path: "/guides/chopsticks-set/",
-  h1: "Chopsticks Set",
+  h1: "Chopsticks Set: Materials, Pair Count, Gift Boxes, and Buying Checks",
   intro: "A chopsticks set is more than several pairs in a box. The right set depends on material, pair count, table setting, cleaning routine, and whether it is for daily meals, guests, or gifting.",
   answer: "A good chopsticks set should match the user's use case: daily family meals, beginner practice, formal table settings, hot pot, restaurant-style serving, or cultural gifts. Compare material, grip texture, length, weight, pair count, included rests, storage box, and care instructions before buying.",
   details: [
