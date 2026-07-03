@@ -1893,7 +1893,7 @@ body::before{content:"";position:fixed;inset:0;z-index:-1;pointer-events:none;ba
 .embedded-tool h3{font-family:Georgia,serif;font-size:clamp(24px,2.2vw,32px);line-height:1.12;margin:8px 0 10px;color:#242318}
 body:not(.page-home):not(.page-guides):not(.seo-report-page){background:#f3eddf}
 body:not(.page-home):not(.page-guides):not(.seo-report-page) .page-hero{max-width:1180px;padding-top:42px;padding-bottom:24px}
-body:not(.page-home):not(.page-guides):not(.seo-report-page) .page-hero h1{color:#26301f;text-shadow:none}
+body:not(.page-home):not(.page-guides):not(.seo-report-page) .page-hero h1{max-width:920px;color:#26301f;font-size:clamp(28px,2.25vw,34px);line-height:1.16;text-shadow:none}
 body:not(.page-home):not(.page-guides):not(.seo-report-page) .page-hero .intro{max-width:820px;color:#4d4b3d;font-size:17px;line-height:1.68}
 body:not(.page-home):not(.page-guides):not(.seo-report-page) .page-hero .eyebrow{background:rgba(110,132,76,.1);border-color:rgba(110,132,76,.26);color:#5d733f}
 body:not(.page-home):not(.page-guides):not(.seo-report-page) .article-shell{max-width:1180px;gap:34px;margin-bottom:38px}
