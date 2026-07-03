@@ -171,6 +171,12 @@ const guides = [
     path: "/guides/chopsticks-set/",
     category: "Buying Guides",
     description: "A buying guide to chopsticks sets, including pair count, materials, rests, gift boxes, care, and table use."
+  },
+  {
+    title: "Japanese Chopsticks",
+    path: "/guides/japanese-chopsticks/",
+    category: "Culture Guides",
+    description: "A practical guide to Japanese chopsticks, including shape, length, materials, gifts, etiquette, and buying checks."
   }
 ];
 
@@ -1554,6 +1560,43 @@ function simpleLegalPage({ title, description, path, h1, intro, sections }) {
 function articleSections(sections = []) {
   return sections.map((section) => `<section class="content-section article-body"><h2>${escapeHtml(section.title)}</h2>${section.paragraphs.map((paragraph) => `<p>${escapeHtml(paragraph)}</p>`).join("")}</section>`).join("");
 }
+
+await writePage("/guides/japanese-chopsticks/", supportArticle({
+  title: "Japanese Chopsticks: Shape, Materials, Etiquette, and Buying Checks",
+  description: "Learn how Japanese chopsticks differ by shape, length, material, table use, gift style, and practical buying details.",
+  path: "/guides/japanese-chopsticks/",
+  h1: "Japanese Chopsticks: Shape, Materials, Etiquette, and Buying Checks",
+  intro: "Japanese chopsticks are usually shorter and more tapered than many Chinese chopsticks, with a style that suits rice bowls, fish, noodles, bento meals, and individual place settings.",
+  answer: "Japanese chopsticks are typically shorter, more pointed, and often made for individual use. Good pairs should feel balanced in the hand, have tips that grip food cleanly, and match the meal setting, whether the use case is daily dining, sushi, ramen, bento, gifts, or decorative tableware.",
+  details: [
+    "The most useful way to compare Japanese chopsticks is not to ask whether they are better than Chinese or Korean chopsticks. The better question is what food, hand size, table setting, and cleaning routine they need to serve.",
+    "For buying, check length, tip texture, coating, weight, dishwasher guidance, gift packaging, and whether the pair is intended for daily use or formal presentation."
+  ],
+  sections: [
+    { title: "What makes Japanese chopsticks different", paragraphs: [
+      "Japanese chopsticks are often designed with a tapered shape that narrows toward the tips. This makes them useful for picking up small pieces of food, separating fish, lifting rice from a bowl, and handling side dishes with more precision. Many pairs are shorter than common Chinese chopsticks because Japanese table settings usually place one pair for each person instead of using longer shared serving chopsticks.",
+      "The difference is practical as much as cultural. A longer, blunt pair may feel stable for shared dishes and larger pieces of food. A shorter, pointed pair can feel more precise for fish, pickles, bento items, and smaller portions. Beginners sometimes assume pointed tips are harder to use, but the opposite can be true when the surface texture and hand length are right."
+    ]},
+    { title: "Materials, coating, and grip", paragraphs: [
+      "Japanese chopsticks are commonly made from wood, bamboo, lacquered wood, resin, or composite materials. Wooden and bamboo pairs often feel warm and light, while lacquered pairs can look more polished for gifts or formal meals. The tradeoff is grip. A very glossy finish may look premium but can feel slippery with noodles, tofu, or oily food.",
+      "Tip texture matters more than decoration. If the tips have subtle grooves or a slightly matte surface, they may hold food more easily. If the tips are very smooth, they may still work well for experienced users but can frustrate beginners. Before buying, look for product photos that show the tips clearly, not only the decorated handle."
+    ]},
+    { title: "Best uses for daily meals, sushi, ramen, and bento", paragraphs: [
+      "For daily meals, choose a pair that feels balanced and easy to clean. A simple wooden or bamboo pair with modest taper is usually more useful than a heavily decorated pair that needs careful hand washing after every meal. For ramen, slightly textured tips help lift noodles without squeezing too hard. For sushi, clean tip control matters because the food can break if the grip is too forceful.",
+      "For bento and lunch boxes, shorter chopsticks or portable chopstick cases can make sense. The main checks are length, case hygiene, and whether the pair dries properly after washing. A portable pair that stays damp inside a closed case can become unpleasant even if it looks convenient."
+    ]},
+    { title: "Etiquette and table placement", paragraphs: [
+      "Japanese chopstick etiquette shares several rules with broader East Asian dining etiquette: do not stick chopsticks upright in rice, do not pass food directly from chopstick to chopstick, do not point with them, and avoid using them like skewers. A chopstick rest is often used to keep the tips off the table and to show a clean resting position between bites.",
+      "The etiquette is not about making diners nervous. It is about keeping the table clean and avoiding gestures that carry funeral or disrespectful associations. For a visitor or beginner, the safest habit is simple: place chopsticks neatly on a rest or across the bowl edge when appropriate, keep the tips clean, and avoid dramatic gestures."
+    ]},
+    { title: "Buying checklist for Japanese chopsticks", paragraphs: [
+      "Start with length. Adult Japanese chopsticks often feel comfortable around the hand size they are designed for, while children or smaller hands may need shorter pairs. Then check weight. A very heavy pair can tire the hand; a very light pair may feel less controlled. The best daily pair usually feels quiet, balanced, and easy to use rather than flashy.",
+      "Next, check cleaning instructions. Some lacquered or decorative pairs should be hand washed. Some resin or composite pairs may be dishwasher safe. If the product will be used every day, cleaning guidance is not a minor detail. A pair that looks beautiful but cannot survive normal washing may become a gift item rather than a practical dining tool.",
+      "Finally, separate daily pairs from gift pairs. Daily chopsticks should focus on grip, comfort, cleaning, and durability. Gift chopsticks can include boxes, rests, name engraving, seasonal patterns, or lacquer finishes, but they still need clear material information and honest care instructions."
+    ]}
+  ],
+  related: [guides[7], guides[16], guides[17], guides[5], guides[9]].filter(Boolean)
+}));
 
 function supportArticle({ title, description, path, h1, intro, answer, details, sections = [], related }) {
   return pageLayout({
