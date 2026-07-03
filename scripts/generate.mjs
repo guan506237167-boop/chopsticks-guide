@@ -749,7 +749,7 @@ await writePage("/", pageLayout({
       <div class="commerce-section-head">
         <p class="eyebrow">Product Categories</p>
         <h2>Shop by material, scene, and gift purpose</h2>
-        <p>Turn each category into an affiliate collection later: bamboo, wood, metal, training pairs, rests, and gift sets.</p>
+        <p>Organize each category around a clear shopping task: bamboo, wood, metal, training pairs, rests, and gift sets.</p>
       </div>
       <div class="product-category-grid">${productCategories.map(productCategoryCard).join("")}</div>
     </section>
@@ -758,7 +758,7 @@ await writePage("/", pageLayout({
       <div class="commerce-section-head">
         <p class="eyebrow">Featured Picks</p>
         <h2>Featured product positions</h2>
-        <p>These are product slots first, guide links second. Real affiliate products can replace the placeholders when available.</p>
+        <p>These slots should later show real product choices with clear material, use case, and care notes.</p>
       </div>
       <div class="best-pick-grid">${bestPickCards.map(bestPickCard).join("")}</div>
     </section>
@@ -1390,7 +1390,7 @@ await writePage("/guides/gold-chopsticks/", supportArticle({
       title: "Common buying mistakes",
       paragraphs: [
         "The biggest mistake is buying the shiniest pair without checking grip. Chopsticks are tools first. If the tips are too smooth, the pair may look good in photos but perform badly at the table. The second mistake is assuming dishwasher-safe care when the set is actually painted, lacquered, or decorated. Heat and detergent can dull a finish quickly.",
-        "Another mistake is treating the color as a universal cultural meaning. Gold can suggest celebration, wealth, or formality in many contexts, but a product page should describe it as visual and symbolic rather than promising luck. That wording keeps the article useful, honest, and safer for future affiliate recommendations."
+        "Another mistake is treating the color as a universal cultural meaning. Gold can suggest celebration, wealth, or formality in many contexts, but a product page should describe it as visual and symbolic rather than promising luck. That wording keeps the article useful, honest, and safer for product recommendations."
       ]
     }
   ],
@@ -1435,7 +1435,7 @@ await writePage("/guides/disposable-vs-reusable-chopsticks/", supportArticle({
       title: "Buying recommendation framework",
       paragraphs: [
         "For takeout businesses and events, look for wrapped disposable pairs, smooth finishing, bulk pricing, and reliable packaging. For home kitchens, start with a reusable set that is easy to grip and easy to clean. For beginners, avoid extremely slick metal or novelty shapes until the basic hand movement is stable.",
-        "For future affiliate pages, this topic can split naturally into four product paths: bulk disposable chopsticks, beginner reusable sets, dishwasher-safe daily sets, and gift-ready chopstick sets. Keeping those paths separate will make recommendations clearer and prevent one page from mixing restaurant supply intent with home dining intent."
+        "This topic naturally splits into four buying paths: bulk disposable chopsticks, beginner reusable sets, dishwasher-safe daily sets, and gift-ready chopstick sets. Keeping those paths separate makes recommendations clearer and prevents one page from mixing restaurant supply intent with home dining intent."
       ]
     },
     {
@@ -1472,7 +1472,7 @@ await writePage("/guides/chinese-chopsticks/", supportArticle({
   details: [
     "The term Chinese chopsticks can refer to everyday bamboo pairs, wooden home sets, restaurant pairs, cooking chopsticks, gift sets, or decorative tableware. The right choice depends on whether the user needs learning support, daily durability, formal presentation, or a cultural gift.",
     "For beginners, the most practical Chinese-style pair is usually medium length, not too smooth, and not too heavy. Bamboo and wood often feel easier than polished metal because they provide more surface grip.",
-    "For buying pages later, this topic can connect product categories such as bamboo chopsticks, wooden chopsticks, gift sets, chopstick rests, hot pot chopsticks, and beginner training sets."
+    "When comparing products, this topic naturally separates into bamboo chopsticks, wooden chopsticks, gift sets, chopstick rests, hot pot chopsticks, and beginner training sets."
   ],
   sections: [
     { title: "What makes Chinese chopsticks different", paragraphs: [
@@ -1500,7 +1500,7 @@ await writePage("/guides/chopsticks-set/", supportArticle({
   details: [
     "For home use, the most practical chopsticks set usually includes enough pairs for the household plus guests, uses a material that is easy to clean, and has tips that are not too slippery.",
     "For gifts, packaging and visual finish matter, but they should not replace practical checks. A decorative box is useful only if the chopsticks themselves are comfortable, balanced, and clearly described.",
-    "For future affiliate blocks, this page can separate daily sets, beginner sets, gift sets, reusable family sets, chopstick-and-rest bundles, and premium decorative sets."
+    "For product recommendations, this page can separate daily sets, beginner sets, gift sets, reusable family sets, chopstick-and-rest bundles, and premium decorative sets."
   ],
   sections: [
     { title: "How to choose a chopsticks set by use case", paragraphs: [
@@ -1574,9 +1574,9 @@ function supportArticle({ title, description, path, h1, intro, answer, details, 
       ${articleSections(sections)}
       <section class="content-section article-body">
         <h2>How to use this guide before buying or practicing</h2>
-        <p>The best way to use this page is to match the advice to a real meal, not to choose by appearance alone. Chopsticks used for learning need grip, clear finger placement, and forgiving food practice. Chopsticks used for guests need clean presentation, balanced length, and easy table placement. Chopsticks used every day need a material that fits the way the household washes, dries, and stores utensils.</p>
+        <p>Before buying or practicing, start with the real meal setting instead of choosing by appearance alone. Chopsticks used for learning need grip, clear finger placement, and forgiving food practice. Chopsticks used for guests need clean presentation, balanced length, and easy table placement. Chopsticks used every day need a material that fits the way the household washes, dries, and stores utensils.</p>
         <p>That practical context matters because many chopstick problems are not caused by the user's hand skill alone. A pair can be too smooth, too heavy, too long, too short, or shaped in a way that makes food control harder. Before treating a technique as wrong, compare the material, tip shape, surface texture, and food type. A beginner trying to pick up rice with polished metal chopsticks is facing a different problem from someone practicing with textured bamboo and larger food pieces.</p>
-        <p>For product research, use this page as a filtering framework. First decide the setting: beginner practice, family dining, restaurant-style service, gift presentation, travel, or child training. Then check the material, grip, cleaning method, and expected lifespan. A good recommendation should explain tradeoffs clearly instead of claiming one pair is best for everyone.</p>
+        <p>For product comparison, use the same practical filter every time. First decide the setting: beginner practice, family dining, restaurant-style service, gift presentation, travel, or child training. Then check the material, grip, cleaning method, and expected lifespan. A good recommendation should explain tradeoffs clearly instead of claiming one pair is best for everyone.</p>
       </section>
       <section class="content-section article-body">
         <h2>Decision checklist and common mistakes</h2>
@@ -1585,8 +1585,8 @@ function supportArticle({ title, description, path, h1, intro, answer, details, 
         <p>For buyers, the common mistake is assuming a premium-looking set is automatically easier to use. Gift sets, lacquered pairs, and polished metal chopsticks can look excellent but still be too slick, too heavy, or too delicate for daily meals. A practical product page should separate appearance, function, care, and cultural setting so the reader can choose the right pair for the real use case.</p>
         <p>When the topic is a technique guide, test the advice with one easy food and one difficult food. When the topic is a buying guide, compare at least two materials before deciding. When the topic is etiquette, focus on visible table behavior rather than memorizing every regional custom. This keeps each guide useful as a practical decision page instead of a short definition.</p>
         <p>The next step should also be clear. A reader who struggles with grip should open the holding guide. A reader comparing products should open material comparison and beginner picks. A reader preparing a table setting should open etiquette and rest guides. Strong internal paths help visitors solve the next problem without returning to search immediately.</p>
-        <p>Before leaving the page, the reader should know one recommended action, one common mistake to avoid, one buying or practice check, and one related page to open next. That is the minimum standard for an old guide page to feel complete rather than thin.</p>
-        <p>For advertising review, this also matters because a useful guide should show original judgment, practical context, and enough explanation for a visitor to make progress without immediately needing another search result.</p>
+        <p>By the end, you should have one clear action, one mistake to avoid, one buying or practice check, and one related guide to open next.</p>
+        <p>That is the difference between a short answer and a useful guide: you know what to try first, what to avoid, and where to continue if the first choice does not fit. If two options look similar, choose the one with clearer material details, visible tips, and care instructions.</p>
       </section>
       ${relatedGuidesBlock("Related guides", related)}
       ${faqBlock(standardFaqs())}
@@ -2172,3 +2172,7 @@ body:not(.page-home):not(.page-guides):not(.seo-report-page) .content-section tb
 
 `; 
 }
+
+
+
+
