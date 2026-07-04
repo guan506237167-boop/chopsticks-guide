@@ -177,6 +177,12 @@ const guides = [
     path: "/guides/japanese-chopsticks/",
     category: "Culture Guides",
     description: "A practical guide to Japanese chopsticks, including shape, length, materials, gifts, etiquette, and buying checks."
+  },
+  {
+    title: "Ceramic Chopstick Rest",
+    path: "/guides/ceramic-chopstick-rest/",
+    category: "Accessories Guides",
+    description: "A practical guide to ceramic chopstick rests, table placement, sizing, cleaning, gift use, and buying checks."
   }
 ];
 
@@ -1596,6 +1602,42 @@ await writePage("/guides/japanese-chopsticks/", supportArticle({
     ]}
   ],
   related: [guides[7], guides[16], guides[17], guides[5], guides[9]].filter(Boolean)
+}));
+
+await writePage("/guides/ceramic-chopstick-rest/", supportArticle({
+  title: "Ceramic Chopstick Rest: Table Use, Gift Style, Cleaning, and Buying Checks",
+  description: "Choose a ceramic chopstick rest by size, stability, glaze quality, table setting style, cleaning needs, gift use, and practical buying details.",
+  path: "/guides/ceramic-chopstick-rest/",
+  h1: "Ceramic Chopstick Rest: Table Use, Gift Style, Cleaning, and Buying Checks",
+  intro: "A ceramic chopstick rest is a small table accessory, but it can change how clean, intentional, and finished a place setting feels.",
+  answer: "A ceramic chopstick rest keeps chopstick tips off the table, gives diners a clear resting position, and can add visual detail to a meal setting. The best choice depends on size, stability, glaze quality, cleaning method, table style, and whether the rest is for daily meals, guests, restaurants, or gift sets.",
+  details: [
+    "A useful chopstick rest guide should not treat the accessory as decoration only. It needs to explain table hygiene, placement, rest shape, material finish, and whether the item works with the chopsticks people actually use.",
+    "Ceramic rests can look premium, but they can also chip, slide, or feel too small if the product is poorly designed. Product photos should show scale, underside shape, and how chopsticks sit on the rest."
+  ],
+  sections: [
+    { title: "What a ceramic chopstick rest is used for", paragraphs: [
+      "A chopstick rest gives the tips a clean place to sit between bites. This helps keep chopsticks from touching the table surface and makes the setting look more organized. In a home setting, it can make a simple dinner feel more deliberate. In a restaurant or guest meal, it signals that each diner has a defined place setting.",
+      "Ceramic is popular because it has weight, shine, and design variety. It can be plain white, hand-painted, glazed, shaped like a leaf, fish, crane, mountain, or minimalist bar. The right style depends on the rest of the tableware. A very decorative rest can look charming with simple bowls, while a plain rest may look better with patterned plates."
+    ]},
+    { title: "Size, shape, and stability checks", paragraphs: [
+      "The first buying check is size. A rest that is too narrow may let chopsticks roll off. A rest that is too tall may lift the tips awkwardly. A rest that is too small can disappear visually beside long Chinese chopsticks, while a very large rest may look heavy beside shorter Japanese chopsticks.",
+      "Shape controls stability. A small groove or concave top helps hold round chopsticks. A flat bar can work well with square or tapered pairs. The underside should sit evenly on the table so the rest does not rock when chopsticks are placed down. If product photos never show the side or underside, the buyer has less information about stability."
+    ]},
+    { title: "Glaze, cleaning, and daily use", paragraphs: [
+      "Ceramic rests should have a smooth glaze where food contact or chopstick contact happens. Rough edges, uneven glaze, and sharp corners make the accessory feel cheaper and harder to clean. For daily use, dishwasher guidance matters. Some handmade or painted pieces may need hand washing to preserve the finish.",
+      "The most practical daily rest is easy to rinse, hard to stain, and not too fragile for normal handling. Highly detailed shapes can look beautiful in photos but collect sauce or dust in small grooves. A restaurant-style rest should be especially simple to clean because it will be handled repeatedly."
+    ]},
+    { title: "Gift sets and table presentation", paragraphs: [
+      "Ceramic chopstick rests work well in gift sets because they make the set feel complete. A pair of chopsticks alone can be useful, but chopsticks plus rests, a storage box, and a short care note feel more intentional. For wedding, housewarming, holiday, or dinner-party gifts, the rest can carry the visual style of the whole set.",
+      "Gift buyers should still check practical details. Are there enough rests for every pair? Does the color match the chopsticks? Is the packaging protective enough for ceramic? Does the seller show the actual set size? A gift box cannot compensate for rests that chip easily or do not hold the chopsticks properly."
+    ]},
+    { title: "Buying checklist before choosing", paragraphs: [
+      "Before buying a ceramic chopstick rest, check six details: length, groove shape, base stability, glaze quality, cleaning instructions, and product scale. If the rest will be used with metal chopsticks, make sure the groove prevents sliding. If it will be used with wooden or bamboo chopsticks, check whether the color and finish look balanced together.",
+      "For a home table, choose a rest that matches the meals you actually serve. For a gift, choose a rest that is attractive but still easy to use. For product recommendations, separate single rests, rest sets, chopstick-and-rest bundles, and handmade ceramic pieces because each has a different buyer expectation."
+    ]}
+  ],
+  related: [guides[9], guides[17], guides[18], guides[14], guides[4]].filter(Boolean)
 }));
 
 function supportArticle({ title, description, path, h1, intro, answer, details, sections = [], related }) {
