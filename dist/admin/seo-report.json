@@ -1,9 +1,9 @@
 {
-  "generatedAt": "2026-07-05T01:30:28.257Z",
+  "generatedAt": "2026-07-05T23:27:49.530Z",
   "totals": {
     "average": 99,
-    "pages": 31,
-    "pass": 31,
+    "pages": 33,
+    "pass": 33,
     "review": 0,
     "fix": 0
   },
@@ -24,7 +24,7 @@
       "score": 92,
       "titleLength": 59,
       "descriptionLength": 124,
-      "wordCount": 632,
+      "wordCount": 661,
       "h1": 1,
       "h2": 4,
       "faqs": 0,
@@ -355,6 +355,28 @@
       "h1": 1,
       "h2": 9,
       "faqs": 6,
+      "issues": []
+    },
+    {
+      "path": "/guides/how-to-eat-ramen-with-chopsticks/",
+      "score": 100,
+      "titleLength": 62,
+      "descriptionLength": 129,
+      "wordCount": 1389,
+      "h1": 1,
+      "h2": 11,
+      "faqs": 4,
+      "issues": []
+    },
+    {
+      "path": "/guides/chopsticks-for-kids/",
+      "score": 100,
+      "titleLength": 69,
+      "descriptionLength": 118,
+      "wordCount": 1351,
+      "h1": 1,
+      "h2": 11,
+      "faqs": 4,
       "issues": []
     }
   ]
