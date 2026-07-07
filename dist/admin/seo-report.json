@@ -1,9 +1,9 @@
 {
-  "generatedAt": "2026-07-06T23:17:43.424Z",
+  "generatedAt": "2026-07-07T23:24:26.740Z",
   "totals": {
     "average": 99,
-    "pages": 35,
-    "pass": 35,
+    "pages": 37,
+    "pass": 37,
     "review": 0,
     "fix": 0
   },
@@ -24,7 +24,7 @@
       "score": 92,
       "titleLength": 59,
       "descriptionLength": 124,
-      "wordCount": 690,
+      "wordCount": 717,
       "h1": 1,
       "h2": 4,
       "faqs": 0,
@@ -398,6 +398,28 @@
       "wordCount": 1007,
       "h1": 1,
       "h2": 10,
+      "faqs": 4,
+      "issues": []
+    },
+    {
+      "path": "/guides/bamboo-chopsticks/",
+      "score": 100,
+      "titleLength": 55,
+      "descriptionLength": 109,
+      "wordCount": 1246,
+      "h1": 1,
+      "h2": 11,
+      "faqs": 4,
+      "issues": []
+    },
+    {
+      "path": "/guides/cooking-chopsticks/",
+      "score": 100,
+      "titleLength": 69,
+      "descriptionLength": 120,
+      "wordCount": 1162,
+      "h1": 1,
+      "h2": 11,
       "faqs": 4,
       "issues": []
     }
