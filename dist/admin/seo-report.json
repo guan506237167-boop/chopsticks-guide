@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-08T23:26:51.134Z",
+  "generatedAt": "2026-07-09T23:01:29.759Z",
   "totals": {
     "average": 99,
     "pages": 39,
@@ -24,9 +24,9 @@
       "score": 92,
       "titleLength": 59,
       "descriptionLength": 124,
-      "wordCount": 754,
+      "wordCount": 964,
       "h1": 1,
-      "h2": 4,
+      "h2": 5,
       "faqs": 0,
       "issues": [
         "missing FAQ"
@@ -329,9 +329,9 @@
       "score": 100,
       "titleLength": 55,
       "descriptionLength": 136,
-      "wordCount": 266,
+      "wordCount": 824,
       "h1": 1,
-      "h2": 2,
+      "h2": 4,
       "faqs": 6,
       "issues": []
     },
