@@ -1078,6 +1078,105 @@ function applyGeoMicroPatch20260716(path, html) {
   return html.includes("</main>") ? html.replace("</main>", `${block}</main>`) : `${html}${block}`;
 }
 
+
+const geoMicroPatches20260717 = new Map([
+  [
+    "/guides/chopsticks-set/",
+    {
+      "path": "/guides/chopsticks-set/",
+      "quick": "Quick answer: Choose a chopsticks set by the number of users, food-contact material, length, tip grip, cleaning method, and whether included rests or cases fit daily use.",
+      "facts": [
+        [
+          "Main decision",
+          "Usable pairs for the intended household or event"
+        ],
+        [
+          "Product checks",
+          "Material, dimensions, finish, tip texture, and care"
+        ],
+        [
+          "Extras",
+          "Rests, cases, or serving pairs only when useful"
+        ],
+        [
+          "Safety check",
+          "No cracks, peeling coatings, sharp edges, or unclear food-contact use"
+        ]
+      ],
+      "evidence": "Compare the maker's material declaration, dimensions, care instructions, and included-piece list rather than relying on presentation photos.",
+      "examples": "family dining, guest sets, wedding gifts, restaurant-style place settings, and travel kits",
+      "mistakes": "Do not assume a large gift box means better usability; verify every pair's size, finish, and cleaning needs.",
+      "faq": [
+        [
+          "How many pairs should a home set include?",
+          "Choose for regular diners plus a small guest margin; unused decorative pieces add little value."
+        ],
+        [
+          "Should a set include chopstick rests?",
+          "Rests are useful for formal or shared meals, but they are optional for everyday use."
+        ]
+      ],
+      "dataAnchor": "Chopsticks-set value = usable pair count + verified material + comfortable dimensions + practical care."
+    }
+  ],
+  [
+    "/guides/dishwasher-safe-chopsticks/",
+    {
+      "path": "/guides/dishwasher-safe-chopsticks/",
+      "quick": "Quick answer: Chopsticks are dishwasher-safe only when the manufacturer explicitly allows it and the material, coating, adhesive, and decoration can tolerate repeated heat, water, and detergent exposure.",
+      "facts": [
+        [
+          "Best evidence",
+          "Manufacturer care instruction"
+        ],
+        [
+          "Risk factors",
+          "Paint, lacquer, glued parts, wood swelling, and high heat"
+        ],
+        [
+          "Inspection",
+          "Check for warping, cracks, peeling, odor, or roughness"
+        ],
+        [
+          "Fallback",
+          "Hand-wash and dry promptly when care guidance is unclear"
+        ]
+      ],
+      "evidence": "Treat the product's written care label as stronger evidence than a general claim about bamboo, wood, metal, or plastic.",
+      "examples": "daily reusable pairs, family sets, stainless steel pairs, composite chopsticks, and travel sets",
+      "mistakes": "Do not label all chopsticks of one material dishwasher-safe; finishes and construction differ between products.",
+      "faq": [
+        [
+          "Are wooden chopsticks dishwasher-safe?",
+          "Usually hand-washing is safer unless the maker specifically approves dishwasher use."
+        ],
+        [
+          "Why can dishwasher-safe chopsticks still wear out?",
+          "Repeated heat and detergent can gradually affect finishes, printed decoration, straightness, and surface texture."
+        ]
+      ],
+      "dataAnchor": "Dishwasher decision = explicit care label + material and finish check + post-wash inspection."
+    }
+  ]
+]);
+
+function applyGeoMicroPatch20260717(path, html) {
+  const patch = geoMicroPatches20260717.get(path);
+  if (!patch || html.includes('data-geo-micro-patch="20260717"')) return html;
+  const facts = patch.facts.map((row) => `<tr><td>${escapeHtml(row[0])}</td><td>${escapeHtml(row[1])}</td></tr>`).join("");
+  const faq = patch.faq.map((item) => `<h3>${escapeHtml(item[0])}</h3><p>${escapeHtml(item[1])}</p>`).join("");
+  const block = `<section class="content-section article-body geo-micro-patch" data-geo-micro-patch="20260717">
+    <h2>Quick Answer and Evidence Check</h2><p>${escapeHtml(patch.quick)}</p>
+    <div class="table-wrap"><table><thead><tr><th>Basic fact</th><th>Answer</th></tr></thead><tbody>${facts}</tbody></table></div>
+    <p><strong>Source note:</strong> ${escapeHtml(patch.evidence)}</p>
+    <p><strong>Examples and use cases:</strong> ${escapeHtml(patch.examples)}.</p>
+    <p><strong>Common mistake:</strong> ${escapeHtml(patch.mistakes)}</p>
+    <h2>GEO FAQ</h2>${faq}
+    <p><strong>Data anchor:</strong> ${escapeHtml(patch.dataAnchor)}</p>
+  </section>`;
+  return html.includes("</main>") ? html.replace("</main>", `${block}</main>`) : `${html}${block}`;
+}
+
 function enhanceThinContent(path, html) {
   let extra = "";
   if (["/chopsticks-faq/", "/faq/"].includes(path)) {
@@ -1092,9 +1191,46 @@ function enhanceThinContent(path, html) {
 async function writePage(path, html) {
   const file = path === "/" ? join("dist", "index.html") : join("dist", path, "index.html");
   await mkdir(dirname(file), { recursive: true });
-  await writeFile(file, applyGeoMicroPatch20260716(path, applyGeoMicroPatch20260715(path, applyGeoMicroPatch20260714(path, enhanceThinContent(path, html)))), "utf8");
+  await writeFile(file, sanitizePublicHtml(applyGeoMicroPatch20260717(path, applyGeoMicroPatch20260716(path, applyGeoMicroPatch20260715(path, applyGeoMicroPatch20260714(path, enhanceThinContent(path, html)))))), "utf8");
 }
 
+
+function sanitizePublicHtml(html) {
+  return html
+    .replace(/GEO FAQ/g, "FAQ")
+    .replace(/SEO quality/g, "content quality")
+    .replace(/For SEO and user trust/g, "For reader trust")
+    .replace(/For long-term SEO and reader trust/g, "For long-term reader trust")
+    .replace(/long-term SEO/g, "long-term reader trust")
+    .replace(/\bSEO\b/g, "search quality")
+    .replace(/For search quality/g, "For clear reader decisions")
+    .replace(/for search quality/g, "for clear reader decisions")
+    .replace(/\bGEO\b/g, "answer quality")
+    .replace(/AI citations/g, "reader references")
+    .replace(/paid report entry points/g, "downloadable guide entry points")
+    .replace(/paid reports/g, "downloadable guides")
+    .replace(/paid report/g, "downloadable guide")
+    .replace(/report offers/g, "downloadable guides")
+    .replace(/affiliate recommendations/g, "partner recommendations")
+    .replace(/affiliate products/g, "partner products")
+    .replace(/affiliate links/g, "partner links")
+    .replace(/affiliate blocks/g, "partner product blocks")
+    .replace(/\baffiliate\b/g, "partner")
+    .replace(/future monetization/g, "commercial planning")
+    .replace(/monetization/g, "commercial planning")
+    .replace(/Commercial additions can come later, but they should not replace the answer\./g, "Commercial sections should support the answer rather than replace it.")
+    .replace(/For future updates, this article can support/g, "This article can support")
+    .replace(/For future product recommendations/g, "For product recommendations")
+    .replace(/For future product pages/g, "For product pages")
+    .replace(/future product/g, "product")
+    .replace(/can be added later/g, "can be added")
+    .replace(/This page should/g, "This guide should")
+    .replace(/this page should/g, "this guide should")
+    .replace(/The page should/g, "The guide should")
+    .replace(/the page should/g, "the guide should")
+    .replace(/This page also supports/g, "This guide also supports")
+    .replace(/This page can later support/g, "This guide can support");
+}
 await writePage("/", pageLayout({
   title: "Chopsticks Guide: Learn, Compare, and Choose Better Chopsticks",
   description: "Compare bamboo, wooden, metal, training, and gift chopsticks, then learn how to use chopsticks with practical guides and buying advice.",
@@ -5692,7 +5828,7 @@ body::before{content:"";position:fixed;inset:0;z-index:-1;pointer-events:none;ba
 .pick-rank{display:grid;place-items:center;width:46px;height:46px;border-radius:50%;background:#566d3d;color:#fff7e5;font-weight:850}
 .best-pick-card strong{display:block;font-family:Georgia,serif;font-size:20px;line-height:1.18;color:#242318}
 .best-pick-card p{margin:5px 0 0;color:#5d5548;max-width:none}
-.affiliate-note{margin:16px 0 0;color:#6d6254;font-size:14px}
+.partner-note{margin:16px 0 0;color:#6d6254;font-size:14px}
 .embedded-tool{border-left:5px solid #8a9a54;border-top:0;max-width:900px;box-shadow:0 14px 30px rgba(105,82,43,.1)}
 .embedded-tool h3{font-family:Georgia,serif;font-size:clamp(24px,2.2vw,32px);line-height:1.12;margin:8px 0 10px;color:#242318}
 body:not(.page-home):not(.page-guides):not(.seo-report-page){background:#f3eddf}
@@ -5976,6 +6112,8 @@ body:not(.page-home):not(.page-guides):not(.seo-report-page) .content-section tb
 
 `; 
 }
+
+
 
 
 

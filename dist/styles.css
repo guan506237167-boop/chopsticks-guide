@@ -102,7 +102,7 @@ body::before{content:"";position:fixed;inset:0;z-index:-1;pointer-events:none;ba
 .pick-rank{display:grid;place-items:center;width:46px;height:46px;border-radius:50%;background:#566d3d;color:#fff7e5;font-weight:850}
 .best-pick-card strong{display:block;font-family:Georgia,serif;font-size:20px;line-height:1.18;color:#242318}
 .best-pick-card p{margin:5px 0 0;color:#5d5548;max-width:none}
-.affiliate-note{margin:16px 0 0;color:#6d6254;font-size:14px}
+.partner-note{margin:16px 0 0;color:#6d6254;font-size:14px}
 .embedded-tool{border-left:5px solid #8a9a54;border-top:0;max-width:900px;box-shadow:0 14px 30px rgba(105,82,43,.1)}
 .embedded-tool h3{font-family:Georgia,serif;font-size:clamp(24px,2.2vw,32px);line-height:1.12;margin:8px 0 10px;color:#242318}
 body:not(.page-home):not(.page-guides):not(.seo-report-page){background:#f3eddf}
