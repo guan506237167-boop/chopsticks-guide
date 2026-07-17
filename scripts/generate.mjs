@@ -3786,7 +3786,8 @@ async function buildSeoReport() {
   </tr>`).join("");
   const json = JSON.stringify({ generatedAt: new Date().toISOString(), totals, reports }, null, 2);
   await mkdir("dist/admin", { recursive: true });
-  await writeFile("dist/admin/seo-report.json", json, "utf8");
+  // Internal report stays out of the public site build.
+  // await writeFile("dist/admin/seo-report.json", json, "utf8");
 }
 
 function auditPage(page, html, sitemap) {
