@@ -1,4 +1,4 @@
-﻿import { mkdir, readdir, readFile, rm, writeFile, copyFile } from "node:fs/promises";
+import { mkdir, readdir, readFile, rm, writeFile, copyFile } from "node:fs/promises";
 import { dirname, join } from "node:path";
 
 const SITE = {
@@ -6064,6 +6064,9 @@ const dailyArticles20260718 = [
 for (const article of dailyArticles20260718) {
   await writePage(article.path, dailyArticlePage20260706(article));
 }
+
+// dailyArticles20260718 sitemap refresh
+await writeFile("dist/sitemap.xml", sitemapXml(), "utf8");
 
 
 function themeCss() {
