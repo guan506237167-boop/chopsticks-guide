@@ -64,6 +64,8 @@ const chopstickTypes = [
 ];
 
 const guides = [
+  { title: "Chopsticks for Beginners: Grip, Length, Material, and Practice Tips", path: "/guides/chopsticks-for-beginners/", category: "Beginner Guides", description: "Choose chopsticks for beginners by grip texture, length, material, tip shape, and simple practice steps for daily meals." },
+  { title: "Travel Chopsticks Guide: Cases, Materials, Cleaning, and Daily Carry", path: "/guides/travel-chopsticks-guide/", category: "Buying Guides", description: "Choose travel chopsticks by case design, material, cleaning method, portability, tip texture, and daily carry comfort." },
   { title: "Chopsticks for Wedding Favors: Sets, Packaging, and Guest Use", path: "/guides/chopsticks-for-wedding-favors/", category: "Gift Guides", description: "Choose chopsticks for wedding favors by pair count, material, packaging, guest comfort, care notes, and respectful table-gift wording." },
   { title: "Chopsticks Care and Cleaning: Wood, Bamboo, Metal, and Reusable Sets", path: "/guides/chopsticks-care-and-cleaning/", category: "Care Guides", description: "Clean and care for chopsticks by material, drying method, dishwasher guidance, storage, odor checks, and replacement signs." },
   {
@@ -463,7 +465,7 @@ function applyGeoMicroPatch20260714(path, html) {
 function blockForGeoMicroPatch20260714(patch) {
   const facts = patch.facts.map((row) => `<tr><td>${escapeHtml(row[0])}</td><td>${escapeHtml(row[1])}</td></tr>`).join("");
   const faq = patch.faq.map((item) => `<h3>${escapeHtml(item[0])}</h3><p>${escapeHtml(item[1])}</p>`).join("");
-  return `<section class="content-section article-body geo-micro-patch" data-geo-micro-patch="20260714">
+  return `.daily-visual-block{display:grid;grid-template-columns:1.1fr .9fr;gap:18px;margin:22px 0;padding:22px;border:1px solid #ead6b8;border-radius:10px;background:linear-gradient(135deg,#fff8ed,#eef7f1);box-shadow:0 12px 28px rgba(47,37,23,.06)}.daily-visual-block span{color:var(--jade);font-size:12px;font-weight:850;text-transform:uppercase;letter-spacing:.05em}.daily-visual-block h2{margin:8px 0 8px}.daily-visual-block p{margin:0;color:var(--muted)}.daily-visual-steps{display:grid;gap:10px}.daily-visual-step{display:grid;grid-template-columns:34px 1fr;gap:10px;align-items:center;background:#fff;border:1px solid var(--line);border-radius:8px;padding:10px}.daily-visual-step strong{display:grid;place-items:center;width:34px;height:34px;border-radius:50%;background:#d6b06e;color:#231d18}.daily-visual-step span{font-size:14px;line-height:1.45;color:#2f2922;text-transform:none;letter-spacing:0;font-weight:650}@media(max-width:760px){.daily-visual-block{grid-template-columns:1fr}}<section class="content-section article-body geo-micro-patch" data-geo-micro-patch="20260714">
     <h2>Quick Answer and Evidence Check</h2>
     <p>${escapeHtml(patch.quick)}</p>
     <div class="table-wrap"><table><thead><tr><th>Basic fact</th><th>Answer</th></tr></thead><tbody>${facts}</tbody></table></div>
@@ -2687,12 +2689,18 @@ const dailyArticles20260706 = [
   }
 ];
 
+
+function dailyVisualBlock20260722(article) {
+  const points = (article.visual?.points || []).slice(0, 3).map((point, index) => `<div class="daily-visual-step"><strong>${index + 1}</strong><span>${escapeHtml(point)}</span></div>`).join("");
+  return `<div class="daily-visual-block"><div><span>${escapeHtml(article.visual?.label || "Guide visual")}</span><h2>${escapeHtml(article.keyword || article.title)}</h2><p>Use the visual checklist before acting on the article. It keeps the page scannable and prevents the answer from becoming a plain text block.</p></div><div class="daily-visual-steps">${points}</div></div>`;
+}
+
 function dailyArticlePage20260706(article) {
   const rows = article.table.rows.map((row) => `<tr>${row.map((cell) => `<td>${escapeHtml(cell)}</td>`).join("")}</tr>`).join("");
   const body = `
     ${articleSearchBlock()}
     <section class="content-section article-body">
-      <p class="lead-answer">${escapeHtml(article.answer)}</p>
+      <p class="lead-answer">${escapeHtml(article.answer)}</p>\n      ${dailyVisualBlock20260722(article)}\n      ${dailyVisualBlock20260722(article)}
       ${geoPatchBlock(article)}
       ${article.details.map((paragraph) => `<p>${escapeHtml(paragraph)}</p>`).join("")}
     </section>
@@ -7116,6 +7124,330 @@ for (const article of dailyArticles20260721) {
   await writePage(article.path, dailyArticlePage20260706(article));
 }
 await writeFile("dist/sitemap.xml", sitemapXml(), "utf8");
+
+
+const dailyArticles20260722 = [
+  {
+    "title": "Chopsticks for Beginners: Grip, Length, Material, and Practice Tips",
+    "path": "/guides/chopsticks-for-beginners/",
+    "description": "Choose chopsticks for beginners by grip texture, length, material, tip shape, and simple practice steps for daily meals.",
+    "h1": "Chopsticks for Beginners: Grip, Length, Material, and Practice Tips",
+    "intro": "If you are comparing chopsticks for beginners, start with the decision the reader is actually trying to make. The best answer explains what to check first, what evidence matters, and what should not be overclaimed.",
+    "answer": "Quick Answer: Beginner chopsticks should be comfortable, lightly textured, not too heavy, and matched to hand size; practice matters more than decorative packaging.",
+    "visual": {
+      "label": "Beginner Guides",
+      "points": [
+        "choose a material and tip texture that will not slip too easily",
+        "practice with larger food pieces before using small or slippery foods",
+        "Use modest, practical wording"
+      ]
+    },
+    "geoPatch": {
+      "noteLabel": "Evidence note",
+      "note": "The practical evidence is chopstick length, weight, material, tip texture, user age, hand comfort, and whether the pair is washable for daily practice.",
+      "dataAnchor": "chopsticks for beginners decision = choose a material and tip texture that will not slip too easily + practice with larger food pieces before using small or slippery foods.",
+      "facts": [
+        [
+          "Main keyword",
+          "chopsticks for beginners"
+        ],
+        [
+          "First check",
+          "choose a material and tip texture that will not slip too easily"
+        ],
+        [
+          "Second check",
+          "practice with larger food pieces before using small or slippery foods"
+        ],
+        [
+          "Use limit",
+          "Use cultural, educational, product, family-reference, or practical wording; avoid guaranteed claims about luck, ancestry, health, money, or relationships."
+        ]
+      ]
+    },
+    "details": [
+      "chopsticks for beginners is a practical search because the reader usually needs more than a definition. They may be checking a date, choosing a product, preparing a gift, confirming a character, teaching a cultural topic, or deciding whether a symbolic phrase is safe to use.",
+      "The first decision is to choose a material and tip texture that will not slip too easily. This is the step most likely to change the answer, so it should appear before any decorative meaning or product suggestion.",
+      "The second decision is to practice with larger food pieces before using small or slippery foods. This turns a broad topic into a working checklist that can be used before buying, printing, teaching, sharing, or relying on the result.",
+      "The evidence layer matters. The practical evidence is chopstick length, weight, material, tip texture, user age, hand comfort, and whether the pair is washable for daily practice. That evidence does not remove every uncertainty, but it gives the reader a stable base before interpretation, packaging, design, or purchase wording is added.",
+      "Common use cases include first chopstick practice, family meals, beginner kits, children's learning, restaurant practice, and low-waste dining habits. These situations should not be treated as identical because each one changes the standard for accuracy, durability, wording, and visual proof.",
+      "The main risk is simple: The common mistake is buying a beautiful pair that is too slick, too heavy, or too long for the beginner to control. Put that warning near the decision point because the reader still has time to change the product, wording, input, or next step.",
+      "This guide uses a visual checklist, a fact table, examples, FAQ, and related links so the page does not become a plain block of text. The goal is a page that is easy to scan, useful to readers, and safer for SEO and GEO extraction."
+    ],
+    "sections": [
+      {
+        "title": "Start with the practical decision",
+        "paragraphs": [
+          "For chopsticks for beginners, the page should answer what to check, what can go wrong, and which detail should be verified before the next action.",
+          "This structure protects cultural meaning because symbolism can be explained after the practical check is clear. The reader gets context without being pushed into a rigid rule."
+        ]
+      },
+      {
+        "title": "What to verify first",
+        "paragraphs": [
+          "Start by asking whether the key fact has been confirmed. In this case, the first check is to choose a material and tip texture that will not slip too easily.",
+          "Then apply the second check: practice with larger food pieces before using small or slippery foods. This separates a useful recommendation from a page or product that looks attractive but does not provide enough proof."
+        ]
+      },
+      {
+        "title": "Example scenario",
+        "paragraphs": [
+          "Imagine a reader using this page for first chopstick practice. The safest answer starts with the visible facts, then compares context, then chooses the next page or checklist.",
+          "If the answer still feels uncertain, the reader should treat the result as provisional. A modest next step is more useful than a confident claim that ignores missing evidence."
+        ]
+      },
+      {
+        "title": "Quality checks and warning signs",
+        "paragraphs": [
+          "A reliable choice should make the key evidence visible. The practical evidence is chopstick length, weight, material, tip texture, user age, hand comfort, and whether the pair is washable for daily practice.",
+          "The warning sign to remember is this: The common mistake is buying a beautiful pair that is too slick, too heavy, or too long for the beginner to control. A confident phrase, attractive photo, or polished design does not solve that problem by itself."
+        ]
+      },
+      {
+        "title": "Recommended next step",
+        "paragraphs": [
+          "If accuracy is the concern, open the calculator, lookup, source guide, material comparison, or meaning page before buying or sharing. If product quality is the concern, compare dimensions, material, care, photos, and packaging.",
+          "After reading, save one sentence that explains what changed in your understanding. This keeps the page useful as a working guide rather than a passive article."
+        ]
+      }
+    ],
+    "table": {
+      "title": "Decision checklist",
+      "headers": [
+        "Decision point",
+        "What to check",
+        "Why it matters"
+      ],
+      "rows": [
+        [
+          "First check",
+          "choose a material and tip texture that will not slip too easily",
+          "Prevents the most visible wrong answer"
+        ],
+        [
+          "Practical fit",
+          "practice with larger food pieces before using small or slippery foods",
+          "Connects the topic to real use"
+        ],
+        [
+          "Evidence",
+          "The practical evidence is chopstick length, weight, material, tip texture, user age, hand comfort, and whether the pair is washable for daily practice.",
+          "Keeps the answer trustworthy"
+        ],
+        [
+          "Use cases",
+          "first chopstick practice, family meals, beginner kits, children's learning, restaurant practice, and low-waste dining habits",
+          "Shows where the advice changes"
+        ],
+        [
+          "Common risk",
+          "The common mistake is buying a beautiful pair that is too slick, too heavy, or too long for the beginner to control.",
+          "Prevents avoidable buying, wording, or lookup errors"
+        ]
+      ]
+    },
+    "related": [
+      {
+        "title": "Best Chopsticks for Beginners",
+        "path": "/best-chopsticks-for-beginners/",
+        "category": "Beginner Guides",
+        "description": "Compare beginner-friendly pairs."
+      },
+      {
+        "title": "Chopstick Etiquette",
+        "path": "/chopstick-etiquette/",
+        "category": "Culture Guides",
+        "description": "Learn table basics."
+      },
+      {
+        "title": "Reusable Chopsticks",
+        "path": "/guides/reusable-chopsticks/",
+        "category": "Buying Guides",
+        "description": "Choose daily-use pairs."
+      }
+    ],
+    "faqs": [
+      {
+        "q": "What is the quick answer for chopsticks for beginners?",
+        "a": "Beginner chopsticks should be comfortable, lightly textured, not too heavy, and matched to hand size; practice matters more than decorative packaging."
+      },
+      {
+        "q": "What should I check first for chopsticks for beginners?",
+        "a": "First, choose a material and tip texture that will not slip too easily."
+      },
+      {
+        "q": "What is the biggest mistake with chopsticks for beginners?",
+        "a": "The common mistake is buying a beautiful pair that is too slick, too heavy, or too long for the beginner to control."
+      },
+      {
+        "q": "What evidence matters most for chopsticks for beginners?",
+        "a": "The practical evidence is chopstick length, weight, material, tip texture, user age, hand comfort, and whether the pair is washable for daily practice."
+      }
+    ]
+  },
+  {
+    "title": "Travel Chopsticks Guide: Cases, Materials, Cleaning, and Daily Carry",
+    "path": "/guides/travel-chopsticks-guide/",
+    "description": "Choose travel chopsticks by case design, material, cleaning method, portability, tip texture, and daily carry comfort.",
+    "h1": "Travel Chopsticks Guide: Cases, Materials, Cleaning, and Daily Carry",
+    "intro": "If you are comparing travel chopsticks, start with the decision the reader is actually trying to make. The best answer explains what to check first, what evidence matters, and what should not be overclaimed.",
+    "answer": "Quick Answer: Travel chopsticks work best when the case stays clean, the material is easy to wash, the tips grip food well, and the packed size fits the bag you actually carry.",
+    "visual": {
+      "label": "Buying Guides",
+      "points": [
+        "check whether the case protects clean chopsticks from bag dust and moisture",
+        "compare material, packed length, assembled stability, tip texture, and drying method",
+        "Use modest, practical wording"
+      ]
+    },
+    "geoPatch": {
+      "noteLabel": "Evidence note",
+      "note": "The buying evidence is case size, hinge or sleeve quality, material label, assembled length, tip texture, cleaning instructions, and photos of the packed set.",
+      "dataAnchor": "travel chopsticks decision = check whether the case protects clean chopsticks from bag dust and moisture + compare material, packed length, assembled stability, tip texture, and drying method.",
+      "facts": [
+        [
+          "Main keyword",
+          "travel chopsticks"
+        ],
+        [
+          "First check",
+          "check whether the case protects clean chopsticks from bag dust and moisture"
+        ],
+        [
+          "Second check",
+          "compare material, packed length, assembled stability, tip texture, and drying method"
+        ],
+        [
+          "Use limit",
+          "Use cultural, educational, product, family-reference, or practical wording; avoid guaranteed claims about luck, ancestry, health, money, or relationships."
+        ]
+      ]
+    },
+    "details": [
+      "travel chopsticks is a practical search because the reader usually needs more than a definition. They may be checking a date, choosing a product, preparing a gift, confirming a character, teaching a cultural topic, or deciding whether a symbolic phrase is safe to use.",
+      "The first decision is to check whether the case protects clean chopsticks from bag dust and moisture. This is the step most likely to change the answer, so it should appear before any decorative meaning or product suggestion.",
+      "The second decision is to compare material, packed length, assembled stability, tip texture, and drying method. This turns a broad topic into a working checklist that can be used before buying, printing, teaching, sharing, or relying on the result.",
+      "The evidence layer matters. The buying evidence is case size, hinge or sleeve quality, material label, assembled length, tip texture, cleaning instructions, and photos of the packed set. That evidence does not remove every uncertainty, but it gives the reader a stable base before interpretation, packaging, design, or purchase wording is added.",
+      "Common use cases include office lunches, travel meals, takeout routines, school bags, camping kits, and reusable dining sets. These situations should not be treated as identical because each one changes the standard for accuracy, durability, wording, and visual proof.",
+      "The main risk is simple: The common mistake is choosing a compact travel set without checking whether it is easy to clean and dry between meals. Put that warning near the decision point because the reader still has time to change the product, wording, input, or next step.",
+      "This guide uses a visual checklist, a fact table, examples, FAQ, and related links so the page does not become a plain block of text. The goal is a page that is easy to scan, useful to readers, and safer for SEO and GEO extraction."
+    ],
+    "sections": [
+      {
+        "title": "Start with the practical decision",
+        "paragraphs": [
+          "For travel chopsticks, the page should answer what to check, what can go wrong, and which detail should be verified before the next action.",
+          "This structure protects cultural meaning because symbolism can be explained after the practical check is clear. The reader gets context without being pushed into a rigid rule."
+        ]
+      },
+      {
+        "title": "What to verify first",
+        "paragraphs": [
+          "Start by asking whether the key fact has been confirmed. In this case, the first check is to check whether the case protects clean chopsticks from bag dust and moisture.",
+          "Then apply the second check: compare material, packed length, assembled stability, tip texture, and drying method. This separates a useful recommendation from a page or product that looks attractive but does not provide enough proof."
+        ]
+      },
+      {
+        "title": "Example scenario",
+        "paragraphs": [
+          "Imagine a reader using this page for office lunches. The safest answer starts with the visible facts, then compares context, then chooses the next page or checklist.",
+          "If the answer still feels uncertain, the reader should treat the result as provisional. A modest next step is more useful than a confident claim that ignores missing evidence."
+        ]
+      },
+      {
+        "title": "Quality checks and warning signs",
+        "paragraphs": [
+          "A reliable choice should make the key evidence visible. The buying evidence is case size, hinge or sleeve quality, material label, assembled length, tip texture, cleaning instructions, and photos of the packed set.",
+          "The warning sign to remember is this: The common mistake is choosing a compact travel set without checking whether it is easy to clean and dry between meals. A confident phrase, attractive photo, or polished design does not solve that problem by itself."
+        ]
+      },
+      {
+        "title": "Recommended next step",
+        "paragraphs": [
+          "If accuracy is the concern, open the calculator, lookup, source guide, material comparison, or meaning page before buying or sharing. If product quality is the concern, compare dimensions, material, care, photos, and packaging.",
+          "After reading, save one sentence that explains what changed in your understanding. This keeps the page useful as a working guide rather than a passive article."
+        ]
+      }
+    ],
+    "table": {
+      "title": "Decision checklist",
+      "headers": [
+        "Decision point",
+        "What to check",
+        "Why it matters"
+      ],
+      "rows": [
+        [
+          "First check",
+          "check whether the case protects clean chopsticks from bag dust and moisture",
+          "Prevents the most visible wrong answer"
+        ],
+        [
+          "Practical fit",
+          "compare material, packed length, assembled stability, tip texture, and drying method",
+          "Connects the topic to real use"
+        ],
+        [
+          "Evidence",
+          "The buying evidence is case size, hinge or sleeve quality, material label, assembled length, tip texture, cleaning instructions, and photos of the packed set.",
+          "Keeps the answer trustworthy"
+        ],
+        [
+          "Use cases",
+          "office lunches, travel meals, takeout routines, school bags, camping kits, and reusable dining sets",
+          "Shows where the advice changes"
+        ],
+        [
+          "Common risk",
+          "The common mistake is choosing a compact travel set without checking whether it is easy to clean and dry between meals.",
+          "Prevents avoidable buying, wording, or lookup errors"
+        ]
+      ]
+    },
+    "related": [
+      {
+        "title": "Reusable Chopsticks",
+        "path": "/guides/reusable-chopsticks/",
+        "category": "Buying Guides",
+        "description": "Compare daily-use pairs."
+      },
+      {
+        "title": "Dishwasher Safe Chopsticks",
+        "path": "/guides/dishwasher-safe-chopsticks-guide/",
+        "category": "Care Guides",
+        "description": "Check cleaning tradeoffs."
+      },
+      {
+        "title": "Chopsticks Care and Cleaning",
+        "path": "/guides/chopsticks-care-and-cleaning/",
+        "category": "Care Guides",
+        "description": "Keep pairs safe for food."
+      }
+    ],
+    "faqs": [
+      {
+        "q": "What is the quick answer for travel chopsticks?",
+        "a": "Travel chopsticks work best when the case stays clean, the material is easy to wash, the tips grip food well, and the packed size fits the bag you actually carry."
+      },
+      {
+        "q": "What should I check first for travel chopsticks?",
+        "a": "First, check whether the case protects clean chopsticks from bag dust and moisture."
+      },
+      {
+        "q": "What is the biggest mistake with travel chopsticks?",
+        "a": "The common mistake is choosing a compact travel set without checking whether it is easy to clean and dry between meals."
+      },
+      {
+        "q": "What evidence matters most for travel chopsticks?",
+        "a": "The buying evidence is case size, hinge or sleeve quality, material label, assembled length, tip texture, cleaning instructions, and photos of the packed set."
+      }
+    ]
+  }
+];
+
+for (const article of dailyArticles20260722) {
+  await writePage(article.path, dailyArticlePage20260706(article));
+}
 
 function themeCss() {
   return `
