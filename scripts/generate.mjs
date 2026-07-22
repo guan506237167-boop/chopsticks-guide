@@ -9,6 +9,40 @@ const SITE = {
 };
 
 const GA_MEASUREMENT_ID = process.env.GA_MEASUREMENT_ID || "G-3QWR0HFBYC";
+const INDEXABLE_PATHS_RESCUE_20260722 = new Set([
+  "/",
+  "/guides/",
+  "/how-to-use-chopsticks/",
+  "/types-of-chopsticks/",
+  "/chopstick-etiquette/",
+  "/best-chopsticks-for-beginners/",
+  "/guides/bamboo-vs-wooden-vs-metal-chopsticks/",
+  "/guides/chinese-vs-japanese-vs-korean-chopsticks/",
+  "/guides/chopsticks-set/",
+  "/guides/travel-chopsticks/",
+  "/guides/best-chopsticks-for-beginners/",
+  "/guides/bamboo-vs-wooden-chopsticks-buying-guide/",
+  "/guides/best-reusable-chopsticks/",
+  "/guides/chopsticks-care-and-cleaning/",
+  "/guides/japanese-vs-chinese-chopsticks/",
+  "/chopsticks-faq/",
+  "/faq/",
+  "/about/",
+  "/contact/",
+  "/privacy/",
+  "/terms/",
+  "/disclaimer/"
+]);
+
+function isIndexablePath(path) {
+  return INDEXABLE_PATHS_RESCUE_20260722.has(path);
+}
+
+function sitemapPages() {
+  const seen = new Set();
+  return pages.filter((page) => isIndexablePath(page.path) && !seen.has(page.path) && seen.add(page.path));
+}
+
 
 const keywordRows = parseCsv(await readFile("docs/keyword-library/chopsticks-keyword-library.csv", "utf8"));
 const tutorialKeywords = keywordRows.filter((row) => row.category === "tutorial").slice(0, 24);
@@ -379,7 +413,7 @@ const geoMicroPatches20260714 = new Map([
     "/guides/best-reusable-chopsticks/",
     {
       "path": "/guides/best-reusable-chopsticks/",
-      "quick": "Quick answer: The best reusable chopsticks are the pair that matches daily cleaning habits, food texture, grip comfort, and material safety rather than the pair that only looks attractive.",
+      "quick": "Short answer: The best reusable chopsticks are the pair that matches daily cleaning habits, food texture, grip comfort, and material safety rather than the pair that only looks attractive.",
       "facts": [
         [
           "Main topic",
@@ -418,7 +452,7 @@ const geoMicroPatches20260714 = new Map([
     "/guides/dishwasher-safe-chopsticks-guide/",
     {
       "path": "/guides/dishwasher-safe-chopsticks-guide/",
-      "quick": "Quick answer: Dishwasher safe chopsticks are useful for daily meals only when the material, coating, and seller care instructions support repeated machine washing.",
+      "quick": "Short answer: Dishwasher safe chopsticks are useful for daily meals only when the material, coating, and seller care instructions support repeated machine washing.",
       "facts": [
         [
           "Main topic",
@@ -466,15 +500,15 @@ function blockForGeoMicroPatch20260714(patch) {
   const facts = patch.facts.map((row) => `<tr><td>${escapeHtml(row[0])}</td><td>${escapeHtml(row[1])}</td></tr>`).join("");
   const faq = patch.faq.map((item) => `<h3>${escapeHtml(item[0])}</h3><p>${escapeHtml(item[1])}</p>`).join("");
   return `<section class="content-section article-body geo-micro-patch" data-geo-micro-patch="20260714">
-    <h2>Quick Answer and Evidence Check</h2>
+    <h2>What to Check First</h2>
     <p>${escapeHtml(patch.quick)}</p>
-    <div class="table-wrap"><table><thead><tr><th>Basic fact</th><th>Answer</th></tr></thead><tbody>${facts}</tbody></table></div>
+    <div class="table-wrap"><table><thead><tr><th>Key detail</th><th>Answer</th></tr></thead><tbody>${facts}</tbody></table></div>
     <p><strong>Source note:</strong> ${escapeHtml(patch.evidence)}</p>
     <p><strong>Examples and use cases:</strong> ${escapeHtml(patch.examples)}.</p>
     <p><strong>Common mistake:</strong> ${escapeHtml(patch.mistakes)}</p>
     <h2>GEO FAQ</h2>
     ${faq}
-    <p><strong>Data anchor:</strong> ${escapeHtml(patch.dataAnchor)}</p>
+    <p><strong>Reference note:</strong> ${escapeHtml(patch.dataAnchor)}</p>
   </section>`;
 }
 
@@ -617,6 +651,7 @@ function pageClass(path) {
 
 function pageLayout({ title, description, path, h1, intro, body, faqs = [], pageType = "WebPage", extraSchema = "", articleSidebar = false, heroLabel = "Chopsticks culture tool" }) {
   const canonical = absolute(path);
+  const robotsMeta = isIndexablePath(path) ? "" : `\n  <meta name="robots" content="noindex, follow">`;
   const schema = [
     jsonLd({
       "@context": "https://schema.org",
@@ -643,6 +678,7 @@ function pageLayout({ title, description, path, h1, intro, body, faqs = [], page
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>${escapeHtml(title)}</title>
   <meta name="description" content="${escapeHtml(description)}">
+  ${robotsMeta}
   <link rel="canonical" href="${canonical}">
   <meta property="og:title" content="${escapeHtml(title)}">
   <meta property="og:description" content="${escapeHtml(description)}">
@@ -927,7 +963,7 @@ const geoMicroPatches20260715 = new Map([
     "/guides/best-chopsticks-for-beginners/",
     {
       "path": "/guides/best-chopsticks-for-beginners/",
-      "quick": "Quick answer: The best chopsticks for beginners usually have a light-to-medium weight, a non-slippery finish, textured or squared tips, and a length that fits the user's hand.",
+      "quick": "Short answer: The best chopsticks for beginners usually have a light-to-medium weight, a non-slippery finish, textured or squared tips, and a length that fits the user's hand.",
       "facts": [
         [
           "Main task",
@@ -966,7 +1002,7 @@ const geoMicroPatches20260715 = new Map([
     "/guides/travel-chopsticks-set/",
     {
       "path": "/guides/travel-chopsticks-set/",
-      "quick": "Quick answer: A practical travel chopsticks set needs a secure ventilated case, easy-to-clean food-contact materials, compact dimensions, and joints that stay firm if the chopsticks fold or unscrew.",
+      "quick": "Short answer: A practical travel chopsticks set needs a secure ventilated case, easy-to-clean food-contact materials, compact dimensions, and joints that stay firm if the chopsticks fold or unscrew.",
       "facts": [
         [
           "Main task",
@@ -1009,13 +1045,13 @@ function applyGeoMicroPatch20260715(path, html) {
   const facts = patch.facts.map((row) => `<tr><td>${escapeHtml(row[0])}</td><td>${escapeHtml(row[1])}</td></tr>`).join("");
   const faq = patch.faq.map((item) => `<h3>${escapeHtml(item[0])}</h3><p>${escapeHtml(item[1])}</p>`).join("");
   const block = `<section class="content-section article-body geo-micro-patch" data-geo-micro-patch="20260715">
-    <h2>Quick Answer and Evidence Check</h2><p>${escapeHtml(patch.quick)}</p>
-    <div class="table-wrap"><table><thead><tr><th>Basic fact</th><th>Answer</th></tr></thead><tbody>${facts}</tbody></table></div>
+    <h2>What to Check First</h2><p>${escapeHtml(patch.quick)}</p>
+    <div class="table-wrap"><table><thead><tr><th>Key detail</th><th>Answer</th></tr></thead><tbody>${facts}</tbody></table></div>
     <p><strong>Source note:</strong> ${escapeHtml(patch.evidence)}</p>
     <p><strong>Examples and use cases:</strong> ${escapeHtml(patch.examples)}.</p>
     <p><strong>Common mistake:</strong> ${escapeHtml(patch.mistakes)}</p>
     <h2>GEO FAQ</h2>${faq}
-    <p><strong>Data anchor:</strong> ${escapeHtml(patch.dataAnchor)}</p>
+    <p><strong>Reference note:</strong> ${escapeHtml(patch.dataAnchor)}</p>
   </section>`;
   return html.includes("</main>") ? html.replace("</main>", `${block}</main>`) : `${html}${block}`;
 }
@@ -1026,7 +1062,7 @@ const geoMicroPatches20260716 = new Map([
     "/guides/cooking-chopsticks/",
     {
       "path": "/guides/cooking-chopsticks/",
-      "quick": "Quick answer: Cooking chopsticks should be long enough to keep hands away from heat, easy to control, made from a food-contact material suited to the task, and inspected for cracks or damaged finishes.",
+      "quick": "Short answer: Cooking chopsticks should be long enough to keep hands away from heat, easy to control, made from a food-contact material suited to the task, and inspected for cracks or damaged finishes.",
       "facts": [
         [
           "Main task",
@@ -1065,7 +1101,7 @@ const geoMicroPatches20260716 = new Map([
     "/guides/chopsticks-gift-set/",
     {
       "path": "/guides/chopsticks-gift-set/",
-      "quick": "Quick answer: A good chopsticks gift set matches the recipient's hand size and habits, uses clearly identified food-contact materials, and includes a case or rest only when those extras are practical.",
+      "quick": "Short answer: A good chopsticks gift set matches the recipient's hand size and habits, uses clearly identified food-contact materials, and includes a case or rest only when those extras are practical.",
       "facts": [
         [
           "Main task",
@@ -1108,13 +1144,13 @@ function applyGeoMicroPatch20260716(path, html) {
   const facts = patch.facts.map((row) => `<tr><td>${escapeHtml(row[0])}</td><td>${escapeHtml(row[1])}</td></tr>`).join("");
   const faq = patch.faq.map((item) => `<h3>${escapeHtml(item[0])}</h3><p>${escapeHtml(item[1])}</p>`).join("");
   const block = `<section class="content-section article-body geo-micro-patch" data-geo-micro-patch="20260716">
-    <h2>Quick Answer and Evidence Check</h2><p>${escapeHtml(patch.quick)}</p>
-    <div class="table-wrap"><table><thead><tr><th>Basic fact</th><th>Answer</th></tr></thead><tbody>${facts}</tbody></table></div>
+    <h2>What to Check First</h2><p>${escapeHtml(patch.quick)}</p>
+    <div class="table-wrap"><table><thead><tr><th>Key detail</th><th>Answer</th></tr></thead><tbody>${facts}</tbody></table></div>
     <p><strong>Source note:</strong> ${escapeHtml(patch.evidence)}</p>
     <p><strong>Examples and use cases:</strong> ${escapeHtml(patch.examples)}.</p>
     <p><strong>Common mistake:</strong> ${escapeHtml(patch.mistakes)}</p>
     <h2>GEO FAQ</h2>${faq}
-    <p><strong>Data anchor:</strong> ${escapeHtml(patch.dataAnchor)}</p>
+    <p><strong>Reference note:</strong> ${escapeHtml(patch.dataAnchor)}</p>
   </section>`;
   return html.includes("</main>") ? html.replace("</main>", `${block}</main>`) : `${html}${block}`;
 }
@@ -1125,7 +1161,7 @@ const geoMicroPatches20260717 = new Map([
     "/guides/chopsticks-set/",
     {
       "path": "/guides/chopsticks-set/",
-      "quick": "Quick answer: Choose a chopsticks set by the number of users, food-contact material, length, tip grip, cleaning method, and whether included rests or cases fit daily use.",
+      "quick": "Short answer: Choose a chopsticks set by the number of users, food-contact material, length, tip grip, cleaning method, and whether included rests or cases fit daily use.",
       "facts": [
         [
           "Main decision",
@@ -1164,7 +1200,7 @@ const geoMicroPatches20260717 = new Map([
     "/guides/dishwasher-safe-chopsticks/",
     {
       "path": "/guides/dishwasher-safe-chopsticks/",
-      "quick": "Quick answer: Chopsticks are dishwasher-safe only when the manufacturer explicitly allows it and the material, coating, adhesive, and decoration can tolerate repeated heat, water, and detergent exposure.",
+      "quick": "Short answer: Chopsticks are dishwasher-safe only when the manufacturer explicitly allows it and the material, coating, adhesive, and decoration can tolerate repeated heat, water, and detergent exposure.",
       "facts": [
         [
           "Best evidence",
@@ -1207,13 +1243,13 @@ function applyGeoMicroPatch20260717(path, html) {
   const facts = patch.facts.map((row) => `<tr><td>${escapeHtml(row[0])}</td><td>${escapeHtml(row[1])}</td></tr>`).join("");
   const faq = patch.faq.map((item) => `<h3>${escapeHtml(item[0])}</h3><p>${escapeHtml(item[1])}</p>`).join("");
   const block = `<section class="content-section article-body geo-micro-patch" data-geo-micro-patch="20260717">
-    <h2>Quick Answer and Evidence Check</h2><p>${escapeHtml(patch.quick)}</p>
-    <div class="table-wrap"><table><thead><tr><th>Basic fact</th><th>Answer</th></tr></thead><tbody>${facts}</tbody></table></div>
+    <h2>What to Check First</h2><p>${escapeHtml(patch.quick)}</p>
+    <div class="table-wrap"><table><thead><tr><th>Key detail</th><th>Answer</th></tr></thead><tbody>${facts}</tbody></table></div>
     <p><strong>Source note:</strong> ${escapeHtml(patch.evidence)}</p>
     <p><strong>Examples and use cases:</strong> ${escapeHtml(patch.examples)}.</p>
     <p><strong>Common mistake:</strong> ${escapeHtml(patch.mistakes)}</p>
     <h2>GEO FAQ</h2>${faq}
-    <p><strong>Data anchor:</strong> ${escapeHtml(patch.dataAnchor)}</p>
+    <p><strong>Reference note:</strong> ${escapeHtml(patch.dataAnchor)}</p>
   </section>`;
   return html.includes("</main>") ? html.replace("</main>", `${block}</main>`) : `${html}${block}`;
 }
@@ -2726,7 +2762,7 @@ function dailyArticlePage20260706(article) {
 function geoPatchBlock(article) {
   if (!article.geoPatch) return "";
   const facts = article.geoPatch.facts.map((row) => `<tr><td>${escapeHtml(row[0])}</td><td>${escapeHtml(row[1])}</td></tr>`).join("");
-  return `<div class="table-wrap"><table><thead><tr><th>Basic fact</th><th>Answer</th></tr></thead><tbody>${facts}</tbody></table></div><p><strong>${escapeHtml(article.geoPatch.noteLabel)}:</strong> ${escapeHtml(article.geoPatch.note)}</p><p><strong>Data anchor:</strong> ${escapeHtml(article.geoPatch.dataAnchor)}</p>`;
+  return `<div class="table-wrap"><table><thead><tr><th>Key detail</th><th>Answer</th></tr></thead><tbody>${facts}</tbody></table></div><p><strong>${escapeHtml(article.geoPatch.noteLabel)}:</strong> ${escapeHtml(article.geoPatch.note)}</p><p><strong>Reference note:</strong> ${escapeHtml(article.geoPatch.dataAnchor)}</p>`;
 }
 
 for (const article of dailyArticles20260706) {
@@ -3814,7 +3850,7 @@ function materialPage(item) {
 }
 
 function sitemapXml() {
-  const urls = pages.map((page) => `  <url><loc>${absolute(page.path)}</loc></url>`).join("\n");
+  const urls = sitemapPages().map((page) => `  <url><loc>${absolute(page.path)}</loc></url>`).join("\n");
   return `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${urls}\n</urlset>\n`;
 }
 
@@ -4488,7 +4524,7 @@ const dailyArticles20260714 = [
     "description": "Choose reusable chopsticks by material, cleaning method, grip, tip shape, finish, travel use, and long-term buying checks.",
     "h1": "Reusable Chopsticks: Materials, Cleaning, Grip, and Buying Checks",
     "intro": "reusable chopsticks is a practical search because the reader usually wants a clear decision, not only a definition. The safest answer starts with the key check and then explains how to use the result responsibly.",
-    "answer": "Quick answer: Reusable chopsticks are worth buying when the material is food-safe, easy to clean, comfortable to grip, and matched to the user's meals; wood and bamboo feel warm, stainless steel is durable, and dishwasher claims should be checked before purchase.",
+    "answer": "Short answer: Reusable chopsticks are worth buying when the material is food-safe, easy to clean, comfortable to grip, and matched to the user's meals; wood and bamboo feel warm, stainless steel is durable, and dishwasher claims should be checked before purchase.",
     "geoPatch": {
       "noteLabel": "Source note",
       "note": "The practical evidence is the product material, care instruction, finish, tip texture, and whether the seller explains food-contact use clearly. This page treats tradition, product use, and family records as reference evidence. Meanings are explained as cultural or practical guidance, not as verified promises about luck, ancestry, personality, health, money, or relationships.",
@@ -4530,7 +4566,7 @@ const dailyArticles20260714 = [
         ]
       },
       {
-        "title": "Basic facts before interpretation",
+        "title": "Key details before interpretation",
         "paragraphs": [
           "A responsible explanation gives the facts before the meaning. The fact may be a date range, a character, a material, a knot form, a package size, a classroom rule, or a visible product feature. The meaning comes later and should be written as a careful reading of those facts.",
           "This is also useful for AI answers and search snippets. If the page states the fact clearly, then repeats the decision rule in normal language, answer engines can summarize it without turning the page into a vague cultural claim. The reader also gets a better experience because the important condition is easy to find."
@@ -4649,7 +4685,7 @@ const dailyArticles20260714 = [
     "description": "Plan chopsticks wedding favors with pair symbolism, packaging, personalization, guest safety, shipping, and quality checks.",
     "h1": "Chopsticks Wedding Favors: Gift Sets, Packaging, and Buying Checks",
     "intro": "chopsticks wedding favors is a practical search because the reader usually wants a clear decision, not only a definition. The safest answer starts with the key check and then explains how to use the result responsibly.",
-    "answer": "Quick answer: Chopsticks wedding favors are suitable when the pair symbolism fits the event, the packaging protects the tips, the material is safe for food contact, and any names or dates are printed clearly without making the favor feel cheap or fragile.",
+    "answer": "Short answer: Chopsticks wedding favors are suitable when the pair symbolism fits the event, the packaging protects the tips, the material is safe for food contact, and any names or dates are printed clearly without making the favor feel cheap or fragile.",
     "geoPatch": {
       "noteLabel": "Source note",
       "note": "The buying evidence is the material listing, package dimensions, engraving method, lead time, and return policy for damaged bulk orders. This page treats tradition, product use, and family records as reference evidence. Meanings are explained as cultural or practical guidance, not as verified promises about luck, ancestry, personality, health, money, or relationships.",
@@ -4691,7 +4727,7 @@ const dailyArticles20260714 = [
         ]
       },
       {
-        "title": "Basic facts before interpretation",
+        "title": "Key details before interpretation",
         "paragraphs": [
           "A responsible explanation gives the facts before the meaning. The fact may be a date range, a character, a material, a knot form, a package size, a classroom rule, or a visible product feature. The meaning comes later and should be written as a careful reading of those facts.",
           "This is also useful for AI answers and search snippets. If the page states the fact clearly, then repeats the decision rule in normal language, answer engines can summarize it without turning the page into a vague cultural claim. The reader also gets a better experience because the important condition is easy to find."
@@ -4817,7 +4853,7 @@ const dailyArticles20260715 = [
     "description": "Choose personalized chopsticks by engraving method, material, gift box, pair count, proof checks, and safe buying decisions.",
     "h1": "Personalized Chopsticks: Engraving, Materials, Gift Boxes, and Buying Checks",
     "intro": "personalized chopsticks is a practical topic because readers usually want to make a decision: what to buy, what to customize, what to print, or what wording is safe to use.",
-    "answer": "Quick answer: Personalized chopsticks are a good gift when the material is usable, the engraving proof is readable, the spelling is checked, and the packaging protects the pair during shipping.",
+    "answer": "Short answer: Personalized chopsticks are a good gift when the material is usable, the engraving proof is readable, the spelling is checked, and the packaging protects the pair during shipping.",
     "geoPatch": {
       "noteLabel": "Source note",
       "note": "The buying evidence is the product material, engraving preview, character or name proof, finish quality, box photo, and return policy for personalization errors. The page treats cultural meaning, product use, and family evidence as separate layers, so the reader can enjoy the tradition without turning it into an unsupported promise.",
@@ -4978,7 +5014,7 @@ const dailyArticles20260715 = [
     "description": "Choose a chopsticks gift set by material, pair count, box quality, rests, personalization, care needs, and recipient use.",
     "h1": "Chopsticks Gift Set: Materials, Pair Count, Packaging, and Practical Checks",
     "intro": "chopsticks gift set is a practical topic because readers usually want to make a decision: what to buy, what to customize, what to print, or what wording is safe to use.",
-    "answer": "Quick answer: A good chopsticks gift set combines usable chopsticks, clear material information, protective packaging, and a gift format that matches the recipient's meals, table style, or event.",
+    "answer": "Short answer: A good chopsticks gift set combines usable chopsticks, clear material information, protective packaging, and a gift format that matches the recipient's meals, table style, or event.",
     "geoPatch": {
       "noteLabel": "Source note",
       "note": "The strongest buying evidence is a clear material listing, close-up photos of the tips and finish, box dimensions, pair count, and care instructions. The page treats cultural meaning, product use, and family evidence as separate layers, so the reader can enjoy the tradition without turning it into an unsupported promise.",
@@ -5146,7 +5182,7 @@ const dailyArticles20260716 = [
     "description": "Choose a chopsticks holder by use case, rest shape, case style, material, cleaning, table setting, and gift packaging.",
     "h1": "Chopsticks Holder Guide: Rests, Cases, Table Use, and Buying Checks",
     "intro": "chopsticks holder is a practical topic because the reader usually wants to buy, print, gift, customize, or verify something before taking action.",
-    "answer": "Quick answer: A chopsticks holder should match the use case: a table rest keeps tips off the table, while a travel case protects reusable chopsticks in a bag.",
+    "answer": "Short answer: A chopsticks holder should match the use case: a table rest keeps tips off the table, while a travel case protects reusable chopsticks in a bag.",
     "geoPatch": {
       "noteLabel": "Source note",
       "note": "The buying evidence is the holder type, material, dimensions, cleaning instructions, stability photos, and whether the listing shows chopsticks inside the holder. The guidance separates evidence, product checks, and symbolic wording so the page stays useful without overclaiming what tradition or design can prove.",
@@ -5307,7 +5343,7 @@ const dailyArticles20260716 = [
     "description": "Choose a travel chopsticks case by hygiene, material, size, ventilation, closure, cleaning, portability, and reusable set fit.",
     "h1": "Travel Chopsticks Case: Hygiene, Materials, Size, and Daily Carry Checks",
     "intro": "travel chopsticks case is a practical topic because the reader usually wants to buy, print, gift, customize, or verify something before taking action.",
-    "answer": "Quick answer: A travel chopsticks case is useful when it protects the tips, closes securely, is easy to clean, and lets the chopsticks dry instead of trapping moisture.",
+    "answer": "Short answer: A travel chopsticks case is useful when it protects the tips, closes securely, is easy to clean, and lets the chopsticks dry instead of trapping moisture.",
     "geoPatch": {
       "noteLabel": "Source note",
       "note": "The practical evidence is case dimensions, closure type, material, ventilation, cleaning instructions, and photos showing the chopsticks inside the case. The guidance separates evidence, product checks, and symbolic wording so the page stays useful without overclaiming what tradition or design can prove.",
@@ -5479,7 +5515,7 @@ const dailyArticles20260717 = [
     "description": "Choose reusable chopsticks by material, grip, cleaning method, durability, dishwasher safety, and daily meal use.",
     "h1": "Reusable Chopsticks Guide: Materials, Cleaning, and Daily Use",
     "intro": "If you are comparing reusable chopsticks, start with the practical decision in front of you: what needs to be checked before a purchase, lookup, gift, report, or design becomes final.",
-    "answer": "Quick answer: Reusable chopsticks are a good daily choice when the material is comfortable to grip, easy to clean, and durable enough for the meals you actually eat.",
+    "answer": "Short answer: Reusable chopsticks are a good daily choice when the material is comfortable to grip, easy to clean, and durable enough for the meals you actually eat.",
     "geoPatch": {
       "noteLabel": "Evidence note",
       "note": "The practical evidence is the listed material, product length, tip texture, care instructions, dishwasher guidance, and photos that show the grip end and food-contact tips.",
@@ -5640,7 +5676,7 @@ const dailyArticles20260717 = [
     "description": "Choose a chopsticks gift set by material, pair count, packaging, chopstick rests, care notes, and respectful gift wording.",
     "h1": "Chopsticks Gift Set Guide: Materials, Packaging, and Etiquette",
     "intro": "If you are comparing chopsticks gift set, start with the practical decision in front of you: what needs to be checked before a purchase, lookup, gift, report, or design becomes final.",
-    "answer": "Quick answer: A chopsticks gift set works best when the chopsticks are usable first, then supported by good packaging, clear care notes, and simple table-setting accessories.",
+    "answer": "Short answer: A chopsticks gift set works best when the chopsticks are usable first, then supported by good packaging, clear care notes, and simple table-setting accessories.",
     "geoPatch": {
       "noteLabel": "Evidence note",
       "note": "The buying evidence is pair count, material, length, surface finish, rest or holder details, box dimensions, care instructions, and full-set photos.",
@@ -5808,7 +5844,7 @@ const dailyArticles20260718 = [
     "description": "Compare Japanese vs Chinese chopsticks by length, tip shape, material, meal style, table setting, and beginner comfort.",
     "h1": "Japanese vs Chinese Chopsticks: Length, Shape, Materials, and Use",
     "intro": "If you are comparing Japanese vs Chinese chopsticks, start with the choice in front of you: what must be checked before a date, character, gift, product, printable, or symbolic meaning becomes final.",
-    "answer": "Quick answer: Japanese chopsticks are often shorter and more pointed, while Chinese chopsticks are often longer with blunter tips; the better choice depends on meal style, grip comfort, and cleaning needs.",
+    "answer": "Short answer: Japanese chopsticks are often shorter and more pointed, while Chinese chopsticks are often longer with blunter tips; the better choice depends on meal style, grip comfort, and cleaning needs.",
     "geoPatch": {
       "noteLabel": "Evidence note",
       "note": "The practical evidence is the listed length, tip shape, material, surface texture, product photos, care instructions, and whether the set is made for individual or shared dining. Keep symbolic or cultural wording modest, and separate confirmed facts from interpretation.",
@@ -5969,7 +6005,7 @@ const dailyArticles20260718 = [
     "description": "Choose kids training chopsticks by age, grip support, safety, material, practice food, cleaning, and parent supervision.",
     "h1": "Kids Training Chopsticks Guide: Age, Grip, Safety, and Practice",
     "intro": "If you are comparing kids training chopsticks, start with the choice in front of you: what must be checked before a date, character, gift, product, printable, or symbolic meaning becomes final.",
-    "answer": "Quick answer: Kids training chopsticks are useful when they match the child's hand size, offer gentle grip guidance, avoid sharp or loose parts, and make practice short and positive.",
+    "answer": "Short answer: Kids training chopsticks are useful when they match the child's hand size, offer gentle grip guidance, avoid sharp or loose parts, and make practice short and positive.",
     "geoPatch": {
       "noteLabel": "Evidence note",
       "note": "The buying evidence is the age guidance, dimensions, grip design, material, tip texture, safety notes, cleaning instructions, and photos showing how the hand fits. Keep symbolic or cultural wording modest, and separate confirmed facts from interpretation.",
@@ -6137,7 +6173,7 @@ const dailyArticles20260719 = [
     "description": "Choose the best chopsticks for noodles by grip, tip texture, length, weight, material, bowl size, and beginner comfort.",
     "h1": "Best Chopsticks for Noodles: Grip, Length, Tip Shape, and Meal Fit",
     "intro": "If you are searching for best chopsticks for noodles, start with the real decision in front of you. The right answer depends on what needs to be checked before a date, character, product, craft material, classroom note, gift, or family detail becomes final.",
-    "answer": "Quick answer: The best chopsticks for noodles usually have enough tip grip, comfortable length, and moderate weight; very smooth or heavy pairs can make noodles harder for beginners.",
+    "answer": "Short answer: The best chopsticks for noodles usually have enough tip grip, comfortable length, and moderate weight; very smooth or heavy pairs can make noodles harder for beginners.",
     "geoPatch": {
       "noteLabel": "Evidence note",
       "note": "Useful evidence includes product length, tip texture photos, material, weight, care instructions, user skill level, and whether the meal involves soup, sauce, or dry noodles. Keep cultural, family, symbolic, and product wording modest, and separate confirmed details from interpretation.",
@@ -6298,7 +6334,7 @@ const dailyArticles20260719 = [
     "description": "Choose a chopsticks set for home by pair count, material, grip, dishwasher guidance, storage, guests, and daily meal style.",
     "h1": "Chopsticks Set for Home: Pair Count, Material, Cleaning, and Table Use",
     "intro": "If you are searching for chopsticks set for home, start with the real decision in front of you. The right answer depends on what needs to be checked before a date, character, product, craft material, classroom note, gift, or family detail becomes final.",
-    "answer": "Quick answer: A chopsticks set for home should match daily meals, household size, cleaning habits, storage space, and guest use before style or packaging becomes the main decision.",
+    "answer": "Short answer: A chopsticks set for home should match daily meals, household size, cleaning habits, storage space, and guest use before style or packaging becomes the main decision.",
     "geoPatch": {
       "noteLabel": "Evidence note",
       "note": "The practical evidence is pair count, material listing, dimensions, tip texture, care instructions, storage details, photos of the full set, and any dishwasher or hand-wash guidance. Keep cultural, family, symbolic, and product wording modest, and separate confirmed details from interpretation.",
@@ -6466,7 +6502,7 @@ const dailyArticles20260720 = [
     "description": "Choose the best chopsticks for sushi by tip shape, length, material, grip, plating style, cleaning, and beginner comfort.",
     "h1": "Best Chopsticks for Sushi: Tip Shape, Length, Material, and Table Fit",
     "intro": "If you are searching for best chopsticks for sushi, start with the real decision in front of you. The useful answer depends on what should be checked before a product, reading, cultural note, gift, family detail, or report becomes final.",
-    "answer": "Quick answer: The best chopsticks for sushi should feel steady, have a clean tip shape, and match the user's skill level; very slippery or oversized pairs can make small pieces harder to pick up.",
+    "answer": "Short answer: The best chopsticks for sushi should feel steady, have a clean tip shape, and match the user's skill level; very slippery or oversized pairs can make small pieces harder to pick up.",
     "geoPatch": {
       "noteLabel": "Evidence note",
       "note": "Useful evidence includes listed length, material, tip photos, surface texture, weight, care guidance, and photos that show how the chopsticks sit with sushi pieces. Keep cultural, family, symbolic, and product wording modest, and separate confirmed details from interpretation.",
@@ -6627,7 +6663,7 @@ const dailyArticles20260720 = [
     "description": "Choose a chopsticks gift set by material, pair count, packaging, table use, cleaning, engraving, and recipient fit.",
     "h1": "Chopsticks Gift Set Guide: Materials, Packaging, and Useful Buying Checks",
     "intro": "If you are searching for chopsticks gift set guide, start with the real decision in front of you. The useful answer depends on what should be checked before a product, reading, cultural note, gift, family detail, or report becomes final.",
-    "answer": "Quick answer: A chopsticks gift set works best when the material, packaging, pair count, and cleaning method match the recipient's real table habits instead of only looking formal in photos.",
+    "answer": "Short answer: A chopsticks gift set works best when the material, packaging, pair count, and cleaning method match the recipient's real table habits instead of only looking formal in photos.",
     "geoPatch": {
       "noteLabel": "Evidence note",
       "note": "Useful evidence includes product dimensions, material, pair count, packaging photos, care instructions, tip close-ups, and notes about dishwasher or hand-wash limits. Keep cultural, family, symbolic, and product wording modest, and separate confirmed details from interpretation.",
@@ -6802,7 +6838,7 @@ const dailyArticles20260721 = [
     "description": "Choose chopsticks for wedding favors by pair count, material, packaging, guest comfort, care notes, and respectful table-gift wording.",
     "h1": "Chopsticks for Wedding Favors: Sets, Packaging, and Guest Use",
     "intro": "If you are comparing chopsticks for wedding favors, start with the real decision in front of you. The useful answer depends on what must be checked before a purchase, lookup, gift, design, report, or cultural note becomes final.",
-    "answer": "Quick answer: Chopsticks for wedding favors work best when the set is useful after the event, easy to pack, clearly explained, and matched to the table setting rather than chosen only for decoration.",
+    "answer": "Short answer: Chopsticks for wedding favors work best when the set is useful after the event, easy to pack, clearly explained, and matched to the table setting rather than chosen only for decoration.",
     "geoPatch": {
       "noteLabel": "Evidence note",
       "note": "The practical evidence is pair count, material, finished length, box size, care note, product photos, and whether a sample can be tested before ordering in bulk.",
@@ -6963,7 +6999,7 @@ const dailyArticles20260721 = [
     "description": "Clean and care for chopsticks by material, drying method, dishwasher guidance, storage, odor checks, and replacement signs.",
     "h1": "Chopsticks Care and Cleaning: Wood, Bamboo, Metal, and Reusable Sets",
     "intro": "If you are comparing chopsticks care and cleaning, start with the real decision in front of you. The useful answer depends on what must be checked before a purchase, lookup, gift, design, report, or cultural note becomes final.",
-    "answer": "Quick answer: Chopsticks care depends on material: wood and bamboo need gentle washing and full drying, while metal and some fiberglass sets may tolerate dishwashers if the maker says so.",
+    "answer": "Short answer: Chopsticks care depends on material: wood and bamboo need gentle washing and full drying, while metal and some fiberglass sets may tolerate dishwashers if the maker says so.",
     "geoPatch": {
       "noteLabel": "Evidence note",
       "note": "The useful evidence is the material label, maker care instructions, visible surface condition, drying behavior, odor, cracks, peeling finish, and dishwasher-safe statement.",
@@ -7133,7 +7169,7 @@ const dailyArticles20260722 = [
     "description": "Choose chopsticks for beginners by grip texture, length, material, tip shape, and simple practice steps for daily meals.",
     "h1": "Chopsticks for Beginners: Grip, Length, Material, and Practice Tips",
     "intro": "If you are comparing chopsticks for beginners, start with the decision the reader is actually trying to make. The best answer explains what to check first, what evidence matters, and what should not be overclaimed.",
-    "answer": "Quick Answer: Beginner chopsticks should be comfortable, lightly textured, not too heavy, and matched to hand size; practice matters more than decorative packaging.",
+    "answer": "Short answer: Beginner chopsticks should be comfortable, lightly textured, not too heavy, and matched to hand size; practice matters more than decorative packaging.",
     "visual": {
       "label": "Beginner Guides",
       "points": [
@@ -7291,7 +7327,7 @@ const dailyArticles20260722 = [
     "description": "Choose travel chopsticks by case design, material, cleaning method, portability, tip texture, and daily carry comfort.",
     "h1": "Travel Chopsticks Guide: Cases, Materials, Cleaning, and Daily Carry",
     "intro": "If you are comparing travel chopsticks, start with the decision the reader is actually trying to make. The best answer explains what to check first, what evidence matters, and what should not be overclaimed.",
-    "answer": "Quick Answer: Travel chopsticks work best when the case stays clean, the material is easy to wash, the tips grip food well, and the packed size fits the bag you actually carry.",
+    "answer": "Short answer: Travel chopsticks work best when the case stays clean, the material is easy to wash, the tips grip food well, and the packed size fits the bag you actually carry.",
     "visual": {
       "label": "Buying Guides",
       "points": [
